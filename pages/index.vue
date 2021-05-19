@@ -46,6 +46,7 @@ export default Vue.extend({})
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #888789;
 }
 
 .title {
