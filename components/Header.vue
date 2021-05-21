@@ -1,29 +1,8 @@
 <template>
     <div>
-        <v-navigation-drawer v-model="drawer" fixed color="accent">
-            <ul>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-                <li>aaa</li>
-            </ul>
-        </v-navigation-drawer>
+        <Drawer v-model="drawer" />
         <v-app-bar app class="header" color="main" fixed flat>
-            <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title>lct-renewal</v-toolbar-title>
             <template v-slot:extension>
                 <v-tabs id="makeTab" background-color="sub">
@@ -36,15 +15,20 @@
     </div>
 </template>
 
-
 <script>
+import Drawer from './Drawer.vue'
+
 export default {
-    data() {
+    components: {
+        Drawer
+    },
+    data () {
         return {
             drawer: null
         }
-    }
+    },
 }
+
 </script>
 
 <style lang="scss">
