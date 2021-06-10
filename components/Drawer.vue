@@ -1,11 +1,12 @@
 <template>
-  <div id="wrapper">
-    <v-navigation-drawer
-      :value="value"
-      @input="$emit('input', $event)"
-      fixed
-      color="accent"
-    >
+  <v-navigation-drawer
+    id="wrapper"
+    :value="value"
+    @input="$emit('input', $event)"
+    fixed
+    color="accent"
+  >
+    <div id="wrapper">
       <v-list>
         <v-list-item>
           <v-list-item-content>
@@ -40,8 +41,8 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
-  </div>
+    </div>
+  </v-navigation-drawer>
 </template>
 
 <script>
@@ -69,7 +70,13 @@ $title-height: 82px;
 $footer-height: 32px;
 
 #wrapper {
-    display: fixed;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+
 }
 
 #d-wrapper {
