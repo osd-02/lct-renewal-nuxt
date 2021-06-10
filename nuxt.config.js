@@ -15,28 +15,48 @@ export default {
     ]
   },
 
+  
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
-
+  
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
-
+  
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
+  
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://vuetifyjs.com/ja/
+    '@nuxtjs/vuetify',
   ],
-
+  
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
+  
+  vuetify: {
+    theme: {
+      light: true,
+      themes: {
+        light: {
+          main: '#d7c1a3',
+          sub: '#ded3bb',
+          primary: '#d14126',
+          secondary: '#888789',
+          accent: '#bdd3e2',
+          warning: '#aa9e32',
+          success: '#0f4c81'
+        },
+      },
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
