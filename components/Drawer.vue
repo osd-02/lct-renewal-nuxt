@@ -5,6 +5,7 @@
     @input="$emit('input', $event)"
     fixed
     color="accent"
+    temporary
   >
     <div id="wrapper">
       <v-list>
