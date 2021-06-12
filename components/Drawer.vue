@@ -5,6 +5,7 @@
     @input="$emit('input', $event)"
     fixed
     color="accent"
+    temporary
   >
     <div id="wrapper">
       <v-list>
@@ -75,8 +76,6 @@ $footer-height: 32px;
   right: 0;
   bottom: 0;
   left: 0;
-  position: fixed;
-
 }
 
 #d-wrapper {
