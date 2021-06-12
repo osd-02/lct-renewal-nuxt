@@ -1,6 +1,6 @@
 <template>
-  <v-sheet id="wrapper" color="main">
-    <v-sheet color="main" width="100%" min-height="130vh">
+  <v-sheet id="wrapper">
+    <v-sheet width="100%" min-height="130vh" color="secondary">
       <h2>lct-newal</h2>
     </v-sheet>
   </v-sheet>

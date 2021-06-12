@@ -49,7 +49,7 @@ export default {
           main: '#d7c1a3',
           sub: '#ded3bb',
           primary: '#d14126',
-          secondary: '#888789',
+          secondary: '#ccc8bf',
           accent: '#bdd3e2',
           warning: '#aa9e32',
           success: '#0f4c81'
