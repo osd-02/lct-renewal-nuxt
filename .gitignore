@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Firebase service account key
+lo-culture-firebase-adminsdk-9nmhc-8cb65330d7
