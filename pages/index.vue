@@ -1,7 +1,9 @@
 <template>
-  <div id="wrapper">
-    <h1>Lct renewal Nuxt.js</h1>
-  </div>
+  <v-sheet id="wrapper" color="main">
+    <v-sheet color="main" width="100%" min-height="130vh">
+      <h2>lct-newal</h2>
+    </v-sheet>
+  </v-sheet>
 </template>
 
 <script lang="ts">
@@ -17,10 +19,12 @@ export default Vue.extend({
 $header-height: 106px;
 
 #wrapper {
-  display: flex;
-  min-height: 100vh;
-  padding: 0;
-  width: 100%;
+  // min-height: 130vh;
+  // width: 100%;
+  // position: relative;
+  // padding-top: 30vh;
+  // top: -30vh;
+  
   #header-space {
     height: $header-height;
     padding: 0;

@@ -1,7 +1,7 @@
 <template>
   <div>
       <Drawer v-model="drawer" />
-      <v-app-bar app class="header" color="main" fixed elevate-on-scroll hide-on-scroll height="70px" extension-height="40px">
+      <v-app-bar class="header" color="main" elevate-on-scroll hide-on-scroll height="70px" extension-height="45px" app>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <v-app-bar-title>
           Lo - culture
@@ -49,6 +49,8 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+
+
   #logo-image {
     height: 20px;
     .tabs {
