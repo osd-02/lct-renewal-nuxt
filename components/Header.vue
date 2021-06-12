@@ -1,19 +1,19 @@
 <template>
   <div>
-    <v-app>
       <Drawer v-model="drawer" />
-      <v-app-bar app class="header" color="main" fixed flat>
+      <v-app-bar app class="header" color="main" fixed elevate-on-scroll hide-on-scroll height="70px" extension-height="40px">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <img src="../assets/img/logo.png" id="logo-image" />
-        <template v-slot:extension v-if="tabShow">
-          <v-tabs background-color="sub" align-with-title>
+        <v-app-bar-title>
+          Lo - culture
+        </v-app-bar-title>
+        <template v-slot:extension>
+          <v-tabs background-color="sub" fixed-tabs>
             <v-tab class="tabs" v-for="tabItem in tabItems" :key="tabItem.id">
               {{ tabItem.title }}
             </v-tab>
           </v-tabs>
         </template>
       </v-app-bar>
-    </v-app>
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           return false;
-        case "sm":
+        default:
           return true;
       }
     }
@@ -39,10 +39,8 @@ export default {
       drawer: null,
       tabItems: [
         { title: "Home", id: 1 },
-        { title: "News", id: 2 },
-        { title: "Articles", id: 3 },
-        { title: "Profile", id: 4 },
-        { title: "Info", id: 5 }
+        { title: "Articles", id: 2 },
+        { title: "News", id: 3 },
       ]
     };
   }
