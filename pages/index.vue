@@ -46,19 +46,19 @@ import Drawer from "~/components/Drawer.vue";
 
 export default Vue.extend({
   components: { Drawer },
-  async asyncData({ app }) {
-    try {
-      const baths = await app.flamelink.content.get({
-        schemaKey: "baths",
-        populate: true
-      });
-      console.log({ baths });
-      return { baths };
-    } catch (err) {
-      console.log(err);
-      return { myposts: [] };
-    }
-  }
+  // async asyncData({ app }) {
+  //   try {
+  //     const baths = await app.flamelink.content.get({
+  //       schemaKey: "baths",
+  //       populate: true
+  //     });
+  //     console.log({ baths });
+  //     return { baths };
+  //   } catch (err) {
+  //     console.log(err);
+  //     return { myposts: [] };
+  //   }
+  // }
 });
 </script>
 
