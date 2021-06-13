@@ -49,7 +49,7 @@ export default Vue.extend({
   async asyncData({ app }) {
     try {
       const baths = await app.flamelink.content.get({
-        schemaKey: "baths", // Flamelinkで設定したschemeID
+        schemaKey: "baths",
         populate: true
       });
       console.log({ baths });
