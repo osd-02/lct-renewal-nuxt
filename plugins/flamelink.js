@@ -14,8 +14,7 @@ export default ({ app }) => {
     const admin = require("firebase-admin");
 
     if (!admin.apps.length) {
-      const serviceAccount = require(process.env
-        .FLAMELINK_PATH_TO_SERVICE_ACCOUNT);
+      const serviceAccount = require("../serviceAccountKey.json");
 
       firebaseApp = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
