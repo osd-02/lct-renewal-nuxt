@@ -21,6 +21,8 @@
             <v-list-item-subtitle>{{
               article.announceBody
             }}</v-list-item-subtitle>
+
+            <img :src="article.img[0].image[0].url" />
           </v-list-item-content>
         </v-list-item>
       </v-card>
@@ -45,7 +47,7 @@ export default Vue.extend({
       console.log(err);
       return { myposts: [] };
     }
-  },
+  }
 });
 </script>
 
