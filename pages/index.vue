@@ -42,12 +42,12 @@ export default Vue.extend({
         schemaKey: "articles",
         populate: true
       });
-      return { articles };
+      return { articles }
     } catch (err) {
       console.log(err);
-      return { myposts: [] };
+      return { myposts: [] }
     }
-  }
+  },
 });
 </script>
 

@@ -9,11 +9,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
     "core-js": "^3.9.1",
     "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
     "firebase": "^8.6.7",
     "firebase-admin": "^9.9.0",
     "flamelink": "^1.0.0-alpha.34",
+    "fs": "^0.0.1-security",
     "node-sass": "^6.0.0",
     "nuxt": "^2.15.6",
     "sass-loader": "^10.1.1"
