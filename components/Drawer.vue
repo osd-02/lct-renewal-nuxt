@@ -76,6 +76,7 @@ $footer-height: 32px;
   right: 0;
   bottom: 0;
   left: 0;
+  position: fixed;
 }
 
 #d-wrapper {
