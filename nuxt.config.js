@@ -1,3 +1,6 @@
+require("dotenv").config();
+const {FLAMELINK_API_KEY, FLAMELINK_AUTH_DOMAIN, FLAMELINK_PROJECT_ID, FLAMELINK_DB_URL, FLAMELINK_STORAGE_BUCKET, FLAMELINK_MESSAGING_SENDER_ID} = process.env
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -33,7 +36,9 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@nuxtjs/dotenv'
+  ],
 
   vuetify: {
     theme: {
@@ -53,7 +58,22 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend: function(config, { isDev, isClient }) {
+      config.node = {
+        fs: "empty"
+      };
+    }
+  },
 
-  plugins: ["@/plugins/flamelink"]
+  env: {
+    FLAMELINK_API_KEY,
+    FLAMELINK_AUTH_DOMAIN,
+    FLAMELINK_PROJECT_ID,
+    FLAMELINK_DB_URL,
+    FLAMELINK_STORAGE_BUCKET,
+    FLAMELINK_MESSAGING_SENDER_ID
+  },
+
+  plugins: ["@/plugins/flamelink"],
 };
