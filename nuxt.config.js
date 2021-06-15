@@ -1,5 +1,5 @@
 require("dotenv").config();
-const {FLAMELINK_API_KEY, FLAMELINK_AUTH_DOMAIN, FLAMELINK_PROJECT_ID, FLAMELINK_DB_URL, FLAMELINK_STORAGE_BUCKET, FLAMELINK_MESSAGING_SENDER_ID} = process.env
+// const {FLAMELINK_API_KEY, FLAMELINK_AUTH_DOMAIN, FLAMELINK_PROJECT_ID, FLAMELINK_DB_URL, FLAMELINK_STORAGE_BUCKET, FLAMELINK_MESSAGING_SENDER_ID} = process.env
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -66,14 +66,14 @@ export default {
     }
   },
 
-  env: {
-    FLAMELINK_API_KEY,
-    FLAMELINK_AUTH_DOMAIN,
-    FLAMELINK_PROJECT_ID,
-    FLAMELINK_DB_URL,
-    FLAMELINK_STORAGE_BUCKET,
-    FLAMELINK_MESSAGING_SENDER_ID
-  },
+  // env: {
+  //   FLAMELINK_API_KEY,
+  //   FLAMELINK_AUTH_DOMAIN,
+  //   FLAMELINK_PROJECT_ID,
+  //   FLAMELINK_DB_URL,
+  //   FLAMELINK_STORAGE_BUCKET,
+  //   FLAMELINK_MESSAGING_SENDER_ID
+  // },
 
   plugins: ["@/plugins/flamelink"],
 };
