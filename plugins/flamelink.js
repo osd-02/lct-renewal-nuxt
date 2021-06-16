@@ -15,9 +15,12 @@ export default ({ app }) => {
     const admin = require("firebase-admin");
 
     if (!admin.apps.length) {
-      const serviceAccount = require("../serviceAccountKey.json");
       firebaseApp = admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount),
+        credential: admin.credential.cert({
+          projectId: process.env.FSA_PROJECT_ID,
+          privateKey: process.env.FSA_PRIVATE_KEY.replace(/\\n/g, "\n"),
+          clientEmail: process.env.FSA_CLIENT_EMAIL
+        }),
         databaseURL: process.env.FLAMELINK_DB_URL,
         storageBucket: process.env.FLAMELINK_STORAGE_BUCKET
       });
