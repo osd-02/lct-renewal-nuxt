@@ -13,7 +13,7 @@
         <v-col class="article-child-wrapper">
           <v-btn
             class="article"
-            elevation="6"
+            elevation="2"
             color="sub"
             v-for="article in data"
             v-bind:key="article.publishDate"
@@ -56,9 +56,14 @@ export default Vue.extend({
     align-items: center;
     h5 {
       padding: 0 5vw;
+      -webkit-text-stroke: 1px;
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-color: white;
+      font-size: 3.5vw;
     }
   }
   .bar-wrapper {
+    margin-bottom: 37.5px;
     .bar {
       width: 5vw;
       min-width: 30px;
