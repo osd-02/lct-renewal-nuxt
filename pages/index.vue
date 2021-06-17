@@ -1,7 +1,7 @@
 <template>
   <v-sheet id="wrapper">
     <v-sheet width="100%" min-height="100vh" color="secondary">
-      <News :data="this.articles"/>
+      <Articles :data="this.articles"/>
       <!-- <v-card
       class="mx-auto news"
       width="80vw"
