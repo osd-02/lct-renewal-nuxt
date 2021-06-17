@@ -1,31 +1,29 @@
 <template>
   <v-sheet id="wrapper">
     <v-sheet width="100%" min-height="100vh" color="secondary">
-      <v-subheader>
-        News
-      </v-subheader>
-      <v-card
-        class="mx-auto news"
-        width="80vw"
-        rounded
-        elevation="6"
-        color="sub"
-        v-for="article in articles"
-        v-bind:key="article.publishDate"
-      >
-        <v-list-item two-line>
-          <v-list-item-content>
-            <v-list-item-title
-              >{{ article.title }} / {{ article.type }}</v-list-item-title
-            >
-            <v-list-item-subtitle>{{
-              article.announceBody
-            }}</v-list-item-subtitle>
+      <Articles :data="this.articles"/>
+      <!-- <v-card
+      class="mx-auto news"
+      width="80vw"
+      rounded
+      elevation="6"
+      color="sub"
+      v-for="article in articles"
+      v-bind:key="article.publishDate"
+    >
+      <v-list-item two-line>
+        <v-list-item-content>
+          <v-list-item-title
+            >{{ article.title }} / {{ article.type }}</v-list-item-title
+          >
+          <v-list-item-subtitle>{{
+            article.announceBody
+          }}</v-list-item-subtitle>
 
-            <img :src="article.img[0].image[0].url" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-card>
+          <img :src="article.img[0].image[0].url" />
+        </v-list-item-content>
+      </v-list-item>
+    </v-card> -->
     </v-sheet>
   </v-sheet>
 </template>
@@ -42,19 +40,24 @@ export default Vue.extend({
         schemaKey: "articles",
         populate: true
       });
-      return { articles }
+      return { articles };
     } catch (err) {
       console.log(err);
-      return { myposts: [] }
+      return { myposts: [] };
     }
-  },
+  }
 });
 </script>
 
 <style lang="scss" scoped>
 $header-height: 106px;
+#wrapper {
+  margin: 5vw;
+  // .title-bar {
+  //   // h5 {
+  //   //   // float: right;
+  //   // }
+  // }
 
-.news {
-  margin: 20px;
 }
 </style>
