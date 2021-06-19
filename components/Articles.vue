@@ -89,14 +89,12 @@ export default Vue.extend({
       .article-text {
         position: absolute;
         top: 0;
-        -webkit-text-stroke: 0.2vw;
-        -webkit-text-fill-color: white;
-        -webkit-text-stroke-color: #d14126;
         padding-top: 25vw;
         .v-list-item__title {
           width: 100%;
           font-size: 5vw;
           margin: 10px;
+          color: #d14126;
         }
       }
     }
