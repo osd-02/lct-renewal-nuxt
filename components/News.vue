@@ -3,33 +3,35 @@
     <v-container>
       <v-row no-gutters>
         <v-sheet color="success" class="title-bar">
-          <h5>Articles</h5>
+          <h5>News</h5>
         </v-sheet>
       </v-row>
       <v-row no-gutters>
-        <v-col cols="1" class="bar-wrapper" no-gutters>
-          <v-sheet color="success" class="bar" />
-        </v-col>
         <v-col cols="11" class="article-child-wrapper">
           <v-btn
+            left
             class="article"
             elevation="8"
             color="sub"
             v-for="article in data"
             v-bind:key="article.publishDate"
           >
-            <div class="img-wrapper">
-              <img :src="article.img[0].image[0].url" />
-            </div>
             <div class="article-text">
-              <v-list-item>
+              <v-list-item two-line>
                 <v-list-item-content>
+                  <v-list-item-title>{{ article.publishDate }}</v-list-item-title>
                   <v-list-item-title>{{ article.title }}</v-list-item-title>
                   <v-list-item-title>{{ article.type }}</v-list-item-title>
+                  <v-list-item-title>{{
+                    article.announceBody
+                  }}</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </div>
           </v-btn>
+        </v-col>
+        <v-col cols="1" class="bar-wrapper" no-gutters>
+          <v-sheet color="success" class="bar" />
         </v-col>
       </v-row>
     </v-container>
@@ -69,14 +71,15 @@ export default Vue.extend({
       width: 4vw;
       min-width: 20px;
       height: 100%;
+      margin-left: auto;
     }
   }
   .article-child-wrapper {
     margin: 0;
     .article {
+      margin: 5vw 5vw 5vw 0;
       width: calc(100% - 5vw);
       display: block;
-      margin: 5vw;
       padding: 0;
       height: auto;
       .img-wrapper {
@@ -86,14 +89,10 @@ export default Vue.extend({
         }
       }
       .article-text {
-        position: absolute;
-        top: 0;
-        padding-top: 25vw;
+        width: 100%;
         .v-list-item__title {
-          width: 100%;
-          font-size: 5vw;
-          margin: 10px;
-          color: #d14126;
+          text-align: left;
+          font-size: 3vw;
         }
       }
     }
