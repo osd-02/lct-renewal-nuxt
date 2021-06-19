@@ -2,15 +2,15 @@
   <v-sheet id="wrapper" color="secondary">
     <v-container>
       <v-row no-gutters>
-        <v-sheet color="primary" class="title-bar">
+        <v-sheet color="success" class="title-bar">
           <h5>Articles</h5>
         </v-sheet>
       </v-row>
       <v-row no-gutters>
         <v-col cols="1" class="bar-wrapper" no-gutters>
-          <v-sheet color="primary" class="bar" />
+          <v-sheet color="success" class="bar" />
         </v-col>
-        <v-col class="article-child-wrapper">
+        <v-col cols="11" class="article-child-wrapper">
           <v-btn
             class="article"
             elevation="2"
@@ -22,9 +22,8 @@
               <img :src="article.img[0].image[0].url" />
               <v-list-item two-line>
                 <v-list-item-content>
-                  <v-list-item-title
-                    >{{ article.title }} / {{ article.type }}</v-list-item-title
-                  >
+                  <v-list-item-title>{{ article.title }}</v-list-item-title>
+                  <v-list-item-title>{{ article.type }}</v-list-item-title>
                   <!-- <v-item>{{ article.announceBody }}</v-list-item> -->
                 </v-list-item-content>
               </v-list-item>
@@ -54,6 +53,7 @@ export default Vue.extend({
     min-height: 30px;
     display: flex;
     align-items: center;
+    position: relative;
     h5 {
       padding: 0 5vw;
       -webkit-text-stroke: 1px;
@@ -63,7 +63,7 @@ export default Vue.extend({
     }
   }
   .bar-wrapper {
-    margin-bottom: 37.5px;
+    margin-bottom: 5vw;
     .bar {
       width: 5vw;
       min-width: 30px;
@@ -71,17 +71,20 @@ export default Vue.extend({
     }
   }
   .article-child-wrapper {
-    margin: 5vw 0 5vw 5vw;
+    margin: 0;
     .article {
       margin: 20px;
-      width: 100%;
+      width: calc(100% - 5vw);
       display: block;
-      margin: 0 0 5vw 0;
+      margin: 5vw;
       padding: 0;
       height: auto;
       img-wrapper {
-        position: absolute;
+        width: 100%;
         img {
+          width: 100%;
+        }
+        v-list-itemtitle {
           width: 100%;
         }
       }

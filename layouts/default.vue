@@ -1,8 +1,4 @@
 <template>
-    <!-- <div>
-      <v-sheet color="main" height="100vh" width="100vw" />
-    </div> -->
-
     <v-app>
       <Header />
       <v-main>

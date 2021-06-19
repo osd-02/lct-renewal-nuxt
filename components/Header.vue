@@ -12,7 +12,9 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>
-        Lo - culture
+        <h5>
+          Lo - culture
+        </h5>
       </v-app-bar-title>
       <template v-slot:extension>
         <v-tabs background-color="sub" fixed-tabs>
@@ -57,13 +59,15 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-
-  #logo-image {
-    height: 20px;
-    .tabs {
-      text-transform: none;
-      width: 5vw;
-    }
+  h5 {
+    -webkit-text-stroke: 1px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: white;
+    font-size: 100%;
+  }
+  .tabs {
+    text-transform: none;
+    width: 5vw;
   }
 }
 </style>
