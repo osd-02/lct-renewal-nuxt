@@ -13,18 +13,19 @@
         <v-col cols="11" class="article-child-wrapper">
           <v-btn
             class="article"
-            elevation="2"
+            elevation="8"
             color="sub"
             v-for="article in data"
             v-bind:key="article.publishDate"
           >
             <div class="img-wrapper">
               <img :src="article.img[0].image[0].url" />
+            </div>
+            <div class="article-text">
               <v-list-item two-line>
                 <v-list-item-content>
                   <v-list-item-title>{{ article.title }}</v-list-item-title>
                   <v-list-item-title>{{ article.type }}</v-list-item-title>
-                  <!-- <v-item>{{ article.announceBody }}</v-list-item> -->
                 </v-list-item-content>
               </v-list-item>
             </div>
@@ -49,8 +50,8 @@ export default Vue.extend({
   margin: 0;
   .title-bar {
     width: 100%;
-    height: 5vw;
-    min-height: 30px;
+    height: 4vw;
+    min-height: 20px;
     display: flex;
     align-items: center;
     position: relative;
@@ -59,14 +60,14 @@ export default Vue.extend({
       -webkit-text-stroke: 1px;
       -webkit-text-fill-color: white;
       -webkit-text-stroke-color: white;
-      font-size: 3.5vw;
+      font-size: 3vw;
     }
   }
   .bar-wrapper {
     margin-bottom: 5vw;
     .bar {
-      width: 5vw;
-      min-width: 30px;
+      width: 4vw;
+      min-width: 20px;
       height: 100%;
     }
   }
@@ -79,13 +80,23 @@ export default Vue.extend({
       margin: 5vw;
       padding: 0;
       height: auto;
-      img-wrapper {
+      .img-wrapper {
         width: 100%;
         img {
           width: 100%;
         }
-        v-list-itemtitle {
+      }
+      .article-text {
+        position: absolute;
+        top: 0;
+        -webkit-text-stroke: 0.2vw;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-color: #d14126;
+        padding-top: 25vw;
+        .v-list-item__title {
           width: 100%;
+          font-size: 5vw;
+          margin: 10px;
         }
       }
     }
