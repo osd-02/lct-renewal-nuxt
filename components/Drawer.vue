@@ -6,8 +6,9 @@
     fixed
     color="accent"
     temporary
+    style="width: 50vw"
   >
-    <div id="wrapper">
+    <div id="wrapper-contents">
       <v-list>
         <v-list-item>
           <v-list-item-content>
@@ -69,30 +70,32 @@ export default {
 <style lang="scss" scoped>
 $title-height: 82px;
 $footer-height: 32px;
-
 #wrapper {
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-}
+  #wrapper-contents {
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 50vw;
+  }
 
-#d-wrapper {
-  height: calc(100% - #{$title-height} - #{$footer-height});
-  display: flex;
-  flex-flow: column;
-}
+  #d-wrapper {
+    height: calc(100% - #{$title-height} - #{$footer-height});
+    display: flex;
+    flex-flow: column;
+  }
 
-#d-footer {
-  margin: 0;
-  &-item {
-    min-height: 0;
-    &-content {
-      padding: 0;
-      &-subtitle {
-        text-align: right;
+  #d-footer {
+    margin: 0;
+    &-item {
+      min-height: 0;
+      &-content {
+        padding: 0;
+        &-subtitle {
+          text-align: right;
+        }
       }
     }
   }
