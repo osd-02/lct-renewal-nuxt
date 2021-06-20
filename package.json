@@ -19,7 +19,8 @@
     "fs": "^0.0.1-security",
     "node-sass": "^6.0.0",
     "nuxt": "^2.15.6",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^10.1.1",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",

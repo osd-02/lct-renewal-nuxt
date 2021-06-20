@@ -19,7 +19,7 @@
       <template v-slot:extension>
         <v-tabs background-color="sub" fixed-tabs>
           <v-tab class="tabs" v-for="tabItem in tabItems" :key="tabItem.id">
-            {{ tabItem.title }}
+            <nuxt-link v-scroll-to="`#${tabItem.linkto}`" to>{{ tabItem.title }} </nuxt-link>
           </v-tab>
         </v-tabs>
       </template>
@@ -48,9 +48,9 @@ export default {
     return {
       drawer: null,
       tabItems: [
-        { title: "Home", id: 1 },
-        { title: "Articles", id: 2 },
-        { title: "News", id: 3 }
+        { title: "Home", id: 1 ,linkto: "home-location"},
+        { title: "Articles", id: 2 ,linkto: "articles-location"},
+        { title: "Profile", id: 3 ,linkto: "profile-location"}
       ]
     };
   }
