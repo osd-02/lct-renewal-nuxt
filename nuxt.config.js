@@ -36,9 +36,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/dotenv'
-  ],
+  modules: ["@nuxtjs/dotenv"],
 
   vuetify: {
     theme: {
@@ -75,5 +73,5 @@ export default {
   //   FLAMELINK_MESSAGING_SENDER_ID
   // },
 
-  plugins: ["@/plugins/flamelink"],
+  plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto"]
 };

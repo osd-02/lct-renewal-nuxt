@@ -1,8 +1,8 @@
 <template>
   <v-sheet id="wrapper">
-    <v-sheet width="100%" min-height="100vh" color="secondary">
-      <News :data="this.articles"/>
-      <Articles :data="this.articles"/>
+    <v-sheet width="100%" min-height="100vh" color="secondary" id="home-location">
+      <News :data="this.articles" id="news-location"/>
+      <Articles :data="this.articles" id="articles-location"/>
     </v-sheet>
   </v-sheet>
 </template>
