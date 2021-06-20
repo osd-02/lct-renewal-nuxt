@@ -3,6 +3,7 @@
     <v-sheet width="100%" min-height="100vh" color="secondary" id="home-location">
       <News :data="this.articles" id="news-location"/>
       <Articles :data="this.articles" id="articles-location"/>
+      <Profile :data="this.profile" id="profile-location"/>
     </v-sheet>
   </v-sheet>
 </template>
@@ -19,7 +20,11 @@ export default Vue.extend({
         schemaKey: "articles",
         populate: true
       });
-      return { articles };
+      const profile = await app.flamelink.content.get({
+        schemaKey: "profile",
+        populate: true
+      });
+      return { articles, profile };
     } catch (err) {
       console.log(err);
       return { myposts: [] };
