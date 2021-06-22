@@ -9,27 +9,7 @@
       <v-row no-gutters>
         <v-col cols="11" class="article-child-wrapper">
           <v-sheet class="profile-body" id="about-loculture" color="secondary">
-            <div class="profile-body-wrapper">
-              <pre>
-              {{ data.aboutLoculture }}
-            </pre
-              >
-            </div>
-          </v-sheet>
-          <v-sheet class="profile-body" id="about-me" color="secondary">
-            <div class="profile-body-wrapper">
-              <pre>
-              {{ data.aboutMe }}
-            </pre
-              >
-            </div>
-          </v-sheet>
-          <v-sheet class="profile-body" id="memorandum" color="secondary">
-            <div class="profile-body-wrapper">
-              <pre>
-              {{ data.memorandum }}
-            </pre
-              >
+            <div class="profile-body-wrapper" v-html="`${data.body}`">
             </div>
           </v-sheet>
         </v-col>
