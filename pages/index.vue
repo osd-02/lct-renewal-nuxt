@@ -1,9 +1,14 @@
 <template>
   <v-sheet id="wrapper">
-    <v-sheet width="100%" min-height="100vh" color="secondary" id="home-location">
-      <News :data="this.articles" id="news-location"/>
-      <Articles :data="this.articles" id="articles-location"/>
-      <Profile :data="this.profile" id="profile-location"/>
+    <v-sheet
+      width="100%"
+      min-height="100vh"
+      color="secondary"
+      id="home-location"
+    >
+      <News :data="this.articles" id="news-location" />
+      <Articles :data="this.articles" id="articles-location" />
+      <Profile :data="this.profile" id="profile-location" />
     </v-sheet>
   </v-sheet>
 </template>
@@ -42,6 +47,5 @@ $header-height: 106px;
   //   //   // float: right;
   //   // }
   // }
-
 }
 </style>
