@@ -17,6 +17,14 @@
 import Vue from "vue";
 import Drawer from "~/components/Drawer.vue";
 
+function formatTime (object, after) {
+  for (const property in object) {
+        object[property].publishDate = object[property].publishDate.slice(0, -6).replace(/-/g, after)
+      }
+}
+// for (const property in articles) {
+//         articles[property].publishDate = articles[property].publishDate.slice(0, -6).replace(/-/g, '/')
+//       }
 export default Vue.extend({
   components: { Drawer },
   async asyncData({ app }) {
@@ -29,9 +37,9 @@ export default Vue.extend({
         schemaKey: "profile",
         populate: true
       });
-      for (const property in articles) {
-        articles[property].publishDate = articles[property].publishDate.slice(0, -6).replace(/-/g, '/')
-      }
+
+      formatTime(articles, '/')
+      
       return { articles, profile };
     } catch (err) {
       console.log(err);
