@@ -13,25 +13,39 @@ export default ({ app }) => {
 
   if (process.server) {
     const admin = require("firebase-admin");
-
+    console.log(firebase.apps);
+    // console.log(admin.apps.length.options_.credential)
+    console.log(admin.credential);
     if (!admin.apps.length) {
+      console.log("1");
       firebaseApp = admin.initializeApp({
         credential: admin.credential.cert({
+          type: process.env.FSA_TYPE,
           projectId: process.env.FSA_PROJECT_ID,
+          privateKeyId: process.env.FSA_PRIVATE_KEY_ID,
           privateKey: process.env.FSA_PRIVATE_KEY.replace(/\\n/g, "\n"),
-          clientEmail: process.env.FSA_CLIENT_EMAIL
+          clientEmail: process.env.FSA_CLIENT_EMAIL,
+          clientId: process.env.FSA_CLIENT_ID,
+          authUri: process.env.FSA_AUTH_URI,
+          tokenUri: process.env.FSA_TOKEN_URI,
+          authProviderX509CertUrl: process.env.FSA_AUTH_PROVIDER_X509_CERT_URL,
+          clientX509CertUrl: process.env.FSA_CLIENT_X509_CERT_URL
         }),
         databaseURL: process.env.FLAMELINK_DB_URL,
         storageBucket: process.env.FLAMELINK_STORAGE_BUCKET
       });
     } else {
-      firebaseApp = admin.app();
+      console.log("2");
+      firebaseApp = admin.app()
+      console.log(firebaseApp)
     }
   } else {
+    console.log("3");
     require("firebase/auth");
     require("firebase/firestore");
 
     if (!firebase.apps.length) {
+      console.log("3");
       firebaseApp = firebase.initializeApp({
         apiKey: process.env.FLAMELINK_API_KEY,
         authDomain: process.env.FLAMELINK_AUTH_DOMAIN,
@@ -41,6 +55,7 @@ export default ({ app }) => {
         messagingSenderId: process.env.FLAMELINK_MESSAGING_SENDER_ID
       });
     } else {
+      console.log("4");
       firebaseApp = firebase.app();
     }
   }
