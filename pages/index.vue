@@ -50,10 +50,5 @@ export default Vue.extend({
 $header-height: 106px;
 #wrapper {
   margin: 5vw;
-  // .title-bar {
-  //   // h5 {
-  //   //   // float: right;
-  //   // }
-  // }
 }
 </style>
