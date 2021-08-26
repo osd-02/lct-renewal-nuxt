@@ -43,13 +43,13 @@ export default {
       light: true,
       themes: {
         light: {
-          main: "#d7c1a3",
-          sub: "#ded3bb",
+          main: "#d8c697",
+          sub: "#e9e3bd",
           primary: "#d14126",
-          secondary: "#ccc8bf",
-          accent: "#bdd3e2",
+          secondary: "#f9f6e5",
+          accent: "#e4f4e9",
           warning: "#aa9e32",
-          success: "#0f4c81"
+          success: "#e4f4e9"
         }
       }
     }
@@ -64,14 +64,17 @@ export default {
     }
   },
 
-  // env: {
-  //   FLAMELINK_API_KEY,
-  //   FLAMELINK_AUTH_DOMAIN,
-  //   FLAMELINK_PROJECT_ID,
-  //   FLAMELINK_DB_URL,
-  //   FLAMELINK_STORAGE_BUCKET,
-  //   FLAMELINK_MESSAGING_SENDER_ID
-  // },
+  env: {
+    APP_ID: process.env.APP_ID,
+    API_KEY: process.env.API_KEY,
+    FLAMELINK_API_KEY: process.env.FLAMELINK_API_KEY,
+    FLAMELINK_AUTH_DOMAIN : process.env.FLAMELINK_AUTH_DOMAIN,
+    FLAMELINK_PROJECT_ID: process.env.FLAMELINK_PROJECT_ID,
+    FLAMELINK_STORAGE_BUCKET: process.env.FLAMELINK_STORAGE_BUCKET,
+    FLAMELINK_MESSAGE_SENDER_ID: process.env.FLAMELINK_MESSAGE_SENDER_ID,
+    FLAMELINK_APP_ID: process.env.FLAMELINK_APP_ID,
+    FLAMELINK_MEASUREMENT_ID: process.env.FLAMELINK_MEASUREMENT_ID,
+  },
 
   plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto"],
 

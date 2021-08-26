@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <v-app color="sub">
       <Header />
       <v-main>
         <Nuxt />
@@ -18,8 +18,5 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-}
-.v-application {
-  background-color: #ccc8bf;
 }
 </style>

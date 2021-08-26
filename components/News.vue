@@ -1,5 +1,5 @@
 <template>
-  <v-sheet id="wrapper" color="secondary">
+  <v-sheet id="wrapper">
     <v-container>
       <v-row no-gutters>
         <v-sheet color="success" class="title-bar">
