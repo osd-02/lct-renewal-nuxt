@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Espace';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/Espace.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Radiation';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/Radiation.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RadiationFilled';
+  font-style: filled;
+  font-weight: 400;
+  src: url('~assets/fonts/RadiationFilled.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RadiationHollow';
+  font-style: hollow;
+  font-weight: 400;
+  src: url('~assets/fonts/RadiationHollow.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Infinity';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/infinity.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Aerobusdotty';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/Aerobusdotty.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Spaciouo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/Spaciouo.ttf') format('truetype');
+}
