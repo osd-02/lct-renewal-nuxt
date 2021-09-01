@@ -11,15 +11,17 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title class="title">
-        <h5>
-          Lo   culture
-        </h5>
+      <v-app-bar-title>
+        <div class="title">
+          Lo culture
+        </div>
       </v-app-bar-title>
       <template v-slot:extension>
         <v-tabs background-color="sub" fixed-tabs>
           <v-tab class="tabs" v-for="tabItem in tabItems" :key="tabItem.id">
-            <nuxt-link v-scroll-to="`#${tabItem.linkto}`" to>{{ tabItem.title }} </nuxt-link>
+            <nuxt-link v-scroll-to="`#${tabItem.linkto}`" to
+              >{{ tabItem.title }}
+            </nuxt-link>
           </v-tab>
         </v-tabs>
       </template>
@@ -48,9 +50,9 @@ export default {
     return {
       drawer: null,
       tabItems: [
-        { title: "Home", id: 1 ,linkto: "home-location"},
-        { title: "Articles", id: 2 ,linkto: "articles-location"},
-        { title: "Profile", id: 3 ,linkto: "profile-location"}
+        { title: "Home", id: 1, linkto: "home-location" },
+        { title: "Articles", id: 2, linkto: "articles-location" },
+        { title: "Profile", id: 3, linkto: "profile-location" }
       ]
     };
   }
@@ -61,13 +63,16 @@ export default {
 .wrapper {
   .title {
     width: 70vw;
-    h5 {
-      font-family: "Espace";
-    }
+    font-family: "Infinity" !important;
+    font-size: 2rem !important;
+    vertical-align: middle;
+    font-weight: 500;
   }
   .tabs {
     text-transform: none;
     width: 5vw;
+    font-family: "Spaciouo";
+    font-size: 1rem;
   }
 }
 </style>
