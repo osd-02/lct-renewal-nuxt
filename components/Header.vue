@@ -11,9 +11,9 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title>
+      <v-app-bar-title class="title">
         <h5>
-          Lo - culture
+          Lo   culture
         </h5>
       </v-app-bar-title>
       <template v-slot:extension>
@@ -59,11 +59,11 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  h5 {
-    -webkit-text-stroke: 1px;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-color: white;
-    font-size: 100%;
+  .title {
+    width: 70vw;
+    h5 {
+      font-family: "Espace";
+    }
   }
   .tabs {
     text-transform: none;

@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Espace';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/Espace.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Radiation';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/Radiation.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RadiationFilled';
+  font-style: filled;
+  font-weight: 400;
+  src: url('~assets/fonts/Radiation.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RadiationHollow';
+  font-style: hollow;
+  font-weight: 400;
+  src: url('~assets/fonts/Radiation.ttf') format('truetype');
+}
