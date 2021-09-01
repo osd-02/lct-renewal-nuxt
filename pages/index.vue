@@ -6,6 +6,7 @@
       color="secondary"
       id="home-location"
     >
+      <Carousel :data="this.articles" id="carousel-location" />
       <News :data="this.articles" id="news-location" />
       <Articles :data="this.articles" id="articles-location" />
       <Profile :data="this.profile" id="profile-location" />
