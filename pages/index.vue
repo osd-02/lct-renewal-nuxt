@@ -17,33 +17,13 @@
 import Vue from "vue";
 import Drawer from "~/components/Drawer.vue";
 
+export default {}
+
 function formatTime (object, after) {
   for (const property in object) {
         object[property].publishDate = object[property].publishDate.slice(0, -6).replace(/-/g, after)
       }
 }
-export default Vue.extend({
-  components: { Drawer },
-  async asyncData({ app }) {
-    try {
-      const articles = await app.flamelink.content.get({
-        schemaKey: "articles",
-        populate: true
-      });
-      const profile = await app.flamelink.content.get({
-        schemaKey: "profile",
-        populate: true
-      });
-
-      formatTime(articles, '/')
-      
-      return { articles, profile };
-    } catch (err) {
-      console.log(err);
-      return { myposts: [] };
-    }
-  }
-});
 </script>
 
 <style lang="scss" scoped>
