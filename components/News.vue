@@ -11,7 +11,7 @@
           <v-btn
             class="article"
             color="sub"
-            v-for="article in data"
+            v-for="article in this.articles"
             v-bind:key="article.publishDate"
           >
             <div class="article-text">
@@ -40,9 +40,15 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { mapMutations } from "vuex";
 
 export default Vue.extend({
-  props: ["data"]
+  data: () => ({
+    articles: null
+  }),
+  mounted() {
+    this.articles = this.$store.getters.articles;
+  }
 });
 </script>
 

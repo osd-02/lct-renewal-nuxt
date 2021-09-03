@@ -15,7 +15,7 @@
             class="article"
             elevation="8"
             color="sub"
-            v-for="article in data"
+            v-for="article in articles"
             v-bind:key="article.publishDate"
           >
             <div class="img-wrapper">
@@ -40,7 +40,12 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  props: ["data"]
+  data: () => ({
+    articles: null
+  }),
+  mounted(){
+    this.articles = this.$store.getters.articles
+  }
 });
 </script>
 
