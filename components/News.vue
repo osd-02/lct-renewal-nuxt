@@ -40,15 +40,14 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { mapMutations } from 'vuex'
+import { mapMutations } from "vuex";
 
 export default Vue.extend({
   data: () => ({
     articles: null
   }),
-  mounted(){
-    this.articles = this.$store.getters.articles
-    console.log(this.articles)
+  mounted() {
+    this.articles = this.$store.getters.articles;
   }
 });
 </script>

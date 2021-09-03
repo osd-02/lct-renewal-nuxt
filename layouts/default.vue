@@ -2,7 +2,8 @@
     <v-app>
       <Header />
       <v-main>
-        <Nuxt />
+        <Loading v-show="loading"/>
+        <Nuxt v-show="!loading"/>
       </v-main>
     </v-app>
 </template>
@@ -23,3 +24,18 @@ html {
   background-color: #ccc8bf;
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      loading: true,
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 1000);
+  },
+};
+</script>
