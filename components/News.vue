@@ -7,7 +7,7 @@
         </v-sheet>
       </v-row>
       <v-row no-gutters>
-        <v-col cols="11" class="article-child-wrapper">
+        <v-col cols="12" class="article-child-wrapper">
           <v-btn
             class="article"
             color="sub"
@@ -29,9 +29,9 @@
               </v-list-item>
             </div>
           </v-btn>
-        </v-col>
+        <!-- </v-col>
         <v-col cols="1" class="bar-wrapper" no-gutters>
-          <v-sheet color="success" class="bar" />
+          <v-sheet color="success" class="bar" /> -->
         </v-col>
       </v-row>
     </v-container>
@@ -86,8 +86,9 @@ export default Vue.extend({
     .article-child-wrapper {
       margin: 0;
       .article {
-        margin: 5vw 5vw 5vw 0;
-        width: calc(100% - 5vw);
+        font-family: "spaciouo";
+        margin: 5vw;
+        width: calc(100% - 10vw);
         display: block;
         padding: 0;
         height: auto;
