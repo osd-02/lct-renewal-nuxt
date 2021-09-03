@@ -9,8 +9,7 @@
       <v-row no-gutters>
         <v-col cols="11" class="article-child-wrapper">
           <v-sheet class="profile-body" id="about-loculture" color="secondary">
-            <div class="profile-body-wrapper" v-html="`${data.body}`">
-            </div>
+            <div class="profile-body-wrapper" v-html="`${this.profile}`" />
           </v-sheet>
         </v-col>
         <v-col cols="1" class="bar-wrapper" no-gutters>
@@ -25,7 +24,12 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  props: ["data"]
+  data: () => ({
+    profile: null
+  }),
+  mounted(){
+    this.profile = this.$store.getters.profile
+  }
 });
 </script>
 

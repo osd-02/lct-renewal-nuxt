@@ -13,11 +13,7 @@ export default ({ app }) => {
 
   if (process.server) {
     const admin = require("firebase-admin");
-    console.log(firebase.apps);
-    // console.log(admin.apps.length.options_.credential)
-    console.log(admin.credential);
     if (!admin.apps.length) {
-      console.log("1");
       firebaseApp = admin.initializeApp({
         credential: admin.credential.cert({
           type: process.env.FSA_TYPE,
@@ -35,17 +31,13 @@ export default ({ app }) => {
         storageBucket: process.env.FLAMELINK_STORAGE_BUCKET
       });
     } else {
-      console.log("2");
       firebaseApp = admin.app()
-      console.log(firebaseApp)
     }
   } else {
-    console.log("3");
     require("firebase/auth");
     require("firebase/firestore");
 
     if (!firebase.apps.length) {
-      console.log("3");
       firebaseApp = firebase.initializeApp({
         apiKey: process.env.FLAMELINK_API_KEY,
         authDomain: process.env.FLAMELINK_AUTH_DOMAIN,
@@ -55,11 +47,8 @@ export default ({ app }) => {
         messagingSenderId: process.env.FLAMELINK_MESSAGING_SENDER_ID
       });
     } else {
-      console.log("4");
       firebaseApp = firebase.app();
     }
   }
-  // console.log(firebaseApp);
-  // console.log(process.env);
   app.flamelink = flamelink({ firebaseApp, dbType: "cf" });
 };
