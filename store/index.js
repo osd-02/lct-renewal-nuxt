@@ -41,7 +41,6 @@ export const actions = {
       })
       .sort((a, b) => (a.createdDate > b.createdDate ? -1 : 1)); // (3)
 
-    console.log(myarticles)
     for (const id in getArticles) {
       if (getArticles[id].recommend == false) {
         delete getArticles[id]
