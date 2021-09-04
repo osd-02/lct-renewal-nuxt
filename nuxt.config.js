@@ -2,6 +2,10 @@ require("dotenv").config();
 // const {FLAMELINK_API_KEY, FLAMELINK_AUTH_DOMAIN, FLAMELINK_PROJECT_ID, FLAMELINK_DB_URL, FLAMELINK_STORAGE_BUCKET, FLAMELINK_MESSAGING_SENDER_ID} = process.env
 
 export default {
+  // Target: https://go.nuxtjs.dev/config-target
+  ssr: true,
+  target: "server",
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "lct-nuxt",
@@ -17,7 +21,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/css/main.css'],
+  css: ["@/assets/css/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -59,7 +63,11 @@ export default {
   build: {
     extend: function(config, { isDev, isClient }) {
       config.node = {
-        fs: "empty"
+        fs: "empty",
+        child_process: 'empty',
+        net: 'empty',
+        dns: 'empty',
+        tls: 'empty'
       };
     }
   },
@@ -68,15 +76,15 @@ export default {
     APP_ID: process.env.APP_ID,
     API_KEY: process.env.API_KEY,
     FLAMELINK_API_KEY: process.env.FLAMELINK_API_KEY,
-    FLAMELINK_AUTH_DOMAIN : process.env.FLAMELINK_AUTH_DOMAIN,
+    FLAMELINK_AUTH_DOMAIN: process.env.FLAMELINK_AUTH_DOMAIN,
     FLAMELINK_PROJECT_ID: process.env.FLAMELINK_PROJECT_ID,
     FLAMELINK_STORAGE_BUCKET: process.env.FLAMELINK_STORAGE_BUCKET,
     FLAMELINK_MESSAGE_SENDER_ID: process.env.FLAMELINK_MESSAGE_SENDER_ID,
     FLAMELINK_APP_ID: process.env.FLAMELINK_APP_ID,
-    FLAMELINK_MEASUREMENT_ID: process.env.FLAMELINK_MEASUREMENT_ID,
+    FLAMELINK_MEASUREMENT_ID: process.env.FLAMELINK_MEASUREMENT_ID
   },
 
-  plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto"],
+  plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto"]
 
   // module.exports = {
   //   css: [

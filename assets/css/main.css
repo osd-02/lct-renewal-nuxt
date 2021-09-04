@@ -32,13 +32,13 @@
   font-family: 'Aerobusdotty';
   font-style: normal;
   font-weight: 400;
-  src: url('~assets/fonts/Aerobusdotty.ttf') format('truetype');
+  src: url('~assets/fonts/aerobusdotty.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Spaciouo';
   font-style: normal;
   font-weight: 400;
-  src: url('~assets/fonts/Spaciouo.ttf') format('truetype');
+  src: url('~assets/fonts/spaciouo.ttf') format('truetype');
 }
 @font-face {
   font-family: 'CyberExpert';
