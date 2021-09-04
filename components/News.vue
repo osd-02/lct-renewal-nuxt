@@ -1,30 +1,33 @@
 <template>
   <v-sheet id="wrapper">
-    <v-container　fluid>
+    <v-container fill-height　fluid>
       <v-row no-gutters>
         <v-sheet color="success" class="title-bar">
           <h5>News</h5>
         </v-sheet>
       </v-row>
       <v-row no-gutters>
-        <v-col cols="12" class="article-child-wrapper">
-          <v-btn
-            class="article"
-            color="sub"
+        <v-col
+        cols="6" class="article-child-wrapper"
             v-for="article in this.articles"
             v-bind:key="article.publishDate"
+        >
+          <v-btn
+            class="article rounded-3xl"
+            color="sub"
+            elevation="0"
           >
             <div class="article-text">
               <v-list-item>
                 <v-list-item-content>
-                  <v-list-item-body>{{ article[1].publishDate }}</v-list-item-body>
+                  <v-list-item-body>{{ article.publishDate }}</v-list-item-body>
                   <v-list-item-subtitle>
-                    {{ article[1].type }}
+                    {{ article.type }}
                   </v-list-item-subtitle>
-                  <v-list-item-title class="article-title">{{
-                    article[1].title
+                  <v-list-item-title class="article-title font-Espace text-3xl">{{
+                    article.title
                   }}</v-list-item-title>
-                  <div class="announce-body">{{ article[1].announceBody }}</div>
+                  <div class="announce-body">{{ article.announceBody }}</div>
                 </v-list-item-content>
               </v-list-item>
             </div>
@@ -44,7 +47,7 @@ export default Vue.extend({
     articles: null
   }),
   mounted() {
-    this.articles = this.$store.getters.recommendArticles;
+    this.articles = this.$store.getters.articles;
   }
 });
 </script>
@@ -84,8 +87,8 @@ export default Vue.extend({
       margin: 0;
       .article {
         font-family: "spaciouo";
-        margin: 5vw;
-        width: calc(100% - 10vw);
+        margin: 2vw;
+        width: calc(100% - 4vw);
         display: block;
         padding: 0;
         height: auto;
