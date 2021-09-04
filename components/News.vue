@@ -1,18 +1,25 @@
 <template>
   <v-sheet id="wrapper">
-    <v-container>
+    <v-container fill-height　fluid>
       <v-row no-gutters>
         <v-sheet color="success" class="title-bar">
           <h5>News</h5>
         </v-sheet>
       </v-row>
       <v-row no-gutters>
-        <v-col cols="11" class="article-child-wrapper">
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+          class="article-child-wrapper"
+          v-for="article in this.articles"
+          v-bind:key="article.publishDate"
+        >
           <v-btn
-            class="article"
+            class="article rounded-0 font-Gentium h-full"
             color="sub"
-            v-for="article in this.articles"
-            v-bind:key="article.publishDate"
+            elevation="0"
+            :to="`/articles/${article.id}`"
           >
             <div class="article-text">
               <v-list-item>
@@ -21,7 +28,7 @@
                   <v-list-item-subtitle>
                     {{ article.type }}
                   </v-list-item-subtitle>
-                  <v-list-item-title class="article-title">{{
+                  <v-list-item-title class="article-title text-3xl">{{
                     article.title
                   }}</v-list-item-title>
                   <div class="announce-body">{{ article.announceBody }}</div>
@@ -29,9 +36,6 @@
               </v-list-item>
             </div>
           </v-btn>
-        </v-col>
-        <v-col cols="1" class="bar-wrapper" no-gutters>
-          <v-sheet color="success" class="bar" />
         </v-col>
       </v-row>
     </v-container>
@@ -86,8 +90,8 @@ export default Vue.extend({
     .article-child-wrapper {
       margin: 0;
       .article {
-        margin: 5vw 5vw 5vw 0;
-        width: calc(100% - 5vw);
+        // margin: 1vw;
+        width: calc(100%);
         display: block;
         padding: 0;
         height: auto;

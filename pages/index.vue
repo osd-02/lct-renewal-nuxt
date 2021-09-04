@@ -3,8 +3,8 @@
     <v-sheet width="100%" min-height="100vh" id="home-location">
       <Carousel />
       <News id="news-location" />
-      <Articles id="articles-location" />
-      <Profile id="profile-location" />
+      <!-- <Articles id="articles-location" /> -->
+      <!-- <Profile id="profile-location" /> -->
     </v-sheet>
   </v-sheet>
 </template>
@@ -24,7 +24,4 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 $header-height: 106px;
-#wrapper {
-  margin: 5vw;
-}
 </style>

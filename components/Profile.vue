@@ -7,13 +7,10 @@
         </v-sheet>
       </v-row>
       <v-row no-gutters>
-        <v-col cols="11" class="article-child-wrapper">
-          <v-sheet class="profile-body" id="about-loculture" color="secondary">
+        <v-col cols="12" class="article-child-wrapper">
+          <v-sheet class="profile-body" id="about-loculture">
             <div class="profile-body-wrapper" v-html="`${this.profile}`" />
           </v-sheet>
-        </v-col>
-        <v-col cols="1" class="bar-wrapper" no-gutters>
-          <v-sheet color="success" class="bar" />
         </v-col>
       </v-row>
     </v-container>
@@ -63,7 +60,7 @@ export default Vue.extend({
   }
   .article-child-wrapper {
     .profile-body {
-      margin: 5vw 5vw 5vw 0;
+      margin: 5vw;
       .profile-body-wrapper {
         padding: 5vw;
         border: solid;
