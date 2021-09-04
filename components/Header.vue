@@ -18,7 +18,7 @@
       </v-app-bar-title>
       <template v-slot:extension>
         <v-tabs background-color="sub" fixed-tabs>
-          <v-tab class="tabs" v-for="tabItem in tabItems" :key="tabItem.id">
+          <v-tab class="tabs font-Gentium" v-for="tabItem in tabItems" :key="tabItem.id">
             <nuxt-link v-scroll-to="`#${tabItem.linkto}`" to
               >{{ tabItem.title }}
             </nuxt-link>
@@ -71,7 +71,6 @@ export default {
   .tabs {
     text-transform: none;
     width: 5vw;
-    font-family: "Spaciouo";
     font-size: 1rem;
   }
 }

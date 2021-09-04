@@ -8,14 +8,18 @@
       </v-row>
       <v-row no-gutters>
         <v-col
-        cols="6" class="article-child-wrapper"
-            v-for="article in this.articles"
-            v-bind:key="article.publishDate"
+          cols="12"
+          sm="6"
+          md="4"
+          class="article-child-wrapper"
+          v-for="article in this.articles"
+          v-bind:key="article.publishDate"
         >
           <v-btn
-            class="article rounded-3xl"
+            class="article rounded-0 font-Gentium h-full"
             color="sub"
             elevation="0"
+            :to="`/articles/${article.id}`"
           >
             <div class="article-text">
               <v-list-item>
@@ -24,7 +28,7 @@
                   <v-list-item-subtitle>
                     {{ article.type }}
                   </v-list-item-subtitle>
-                  <v-list-item-title class="article-title font-Espace text-3xl">{{
+                  <v-list-item-title class="article-title text-3xl">{{
                     article.title
                   }}</v-list-item-title>
                   <div class="announce-body">{{ article.announceBody }}</div>
@@ -86,9 +90,8 @@ export default Vue.extend({
     .article-child-wrapper {
       margin: 0;
       .article {
-        font-family: "spaciouo";
-        margin: 2vw;
-        width: calc(100% - 4vw);
+        // margin: 1vw;
+        width: calc(100%);
         display: block;
         padding: 0;
         height: auto;

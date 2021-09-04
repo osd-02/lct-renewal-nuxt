@@ -46,3 +46,15 @@
   font-weight: 400;
   src: url('~assets/fonts/CyberExpert.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Neuropol';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/neuropol.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Gentium';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/Gentium.TTF') format('truetype');
+}

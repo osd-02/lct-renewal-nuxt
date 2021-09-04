@@ -12,6 +12,9 @@ module.exports = {
     fontFamily: {
       CyberExpert: "CyberExpert",
       Espace: "Espace",
+      Radiation: "Radiation",
+      Neuropol: "Neuropol",
+      Gentium: "Gentium",
     }
   },
   variants: {

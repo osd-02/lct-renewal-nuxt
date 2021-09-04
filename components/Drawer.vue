@@ -7,6 +7,7 @@
     color="accent"
     temporary
     style="width: 50vw"
+    class="font-Gentium"
   >
     <div id="wrapper-contents">
       <v-list>

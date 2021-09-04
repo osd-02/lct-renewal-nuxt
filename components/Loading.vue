@@ -4,7 +4,7 @@
       <v-progress-circular
         :size="100"
         :width="10"
-        color="#B0CBE7"
+        color="#d14126"
         indeterminate
       ></v-progress-circular>
       <p>now loading......</p>
