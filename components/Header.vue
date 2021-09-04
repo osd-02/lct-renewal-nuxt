@@ -51,7 +51,7 @@ export default {
       drawer: null,
       tabItems: [
         { title: "Home", id: 1, linkto: "home-location" },
-        { title: "Articles", id: 2, linkto: "articles-location" },
+        { title: "News", id: 2, linkto: "news-location" },
         { title: "Profile", id: 3, linkto: "profile-location" }
       ]
     };

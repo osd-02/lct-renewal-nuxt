@@ -17,21 +17,18 @@
             <div class="article-text">
               <v-list-item>
                 <v-list-item-content>
-                  <v-list-item-body>{{ article.publishDate }}</v-list-item-body>
+                  <v-list-item-body>{{ article[1].publishDate }}</v-list-item-body>
                   <v-list-item-subtitle>
-                    {{ article.type }}
+                    {{ article[1].type }}
                   </v-list-item-subtitle>
                   <v-list-item-title class="article-title">{{
-                    article.title
+                    article[1].title
                   }}</v-list-item-title>
-                  <div class="announce-body">{{ article.announceBody }}</div>
+                  <div class="announce-body">{{ article[1].announceBody }}</div>
                 </v-list-item-content>
               </v-list-item>
             </div>
           </v-btn>
-        <!-- </v-col>
-        <v-col cols="1" class="bar-wrapper" no-gutters>
-          <v-sheet color="success" class="bar" /> -->
         </v-col>
       </v-row>
     </v-container>
@@ -47,7 +44,8 @@ export default Vue.extend({
     articles: null
   }),
   mounted() {
-    this.articles = this.$store.getters.articles;
+    this.articles = this.$store.getters.recommendArticles;
+    console.log(this.articles)
   }
 });
 </script>

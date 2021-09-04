@@ -4,7 +4,7 @@
       <Carousel />
       <News id="news-location" />
       <!-- <Articles id="articles-location" /> -->
-      <Profile id="profile-location" />
+      <!-- <Profile id="profile-location" /> -->
     </v-sheet>
   </v-sheet>
 </template>
