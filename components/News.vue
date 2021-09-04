@@ -1,6 +1,6 @@
 <template>
   <v-sheet id="wrapper">
-    <v-container>
+    <v-container　fluid>
       <v-row no-gutters>
         <v-sheet color="success" class="title-bar">
           <h5>News</h5>
