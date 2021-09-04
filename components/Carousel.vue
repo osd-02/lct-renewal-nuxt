@@ -1,22 +1,17 @@
 <template>
-  <v-carousel cycle hide-delimiter-background show-arrows-on-hover>
-    <v-carousel-item v-for="(article, i) in this.articles" :key="i">
-      <v-sheet height="100%">
-        <v-container　fluid class="p-0">
-          <v-row no-gutters>
-            <v-cols cols="12" xs="6" sm="6">
-              <img :src="article[1].img[0].image[0].url" />
-            </v-cols>
-            <v-cols cols="12" xs="6" sm="6">
-              <div class="text-h2">
-                {{ article[1].announceBody }}
-              </div>
-            </v-cols>
-          </v-row>
-        </v-container>
-      </v-sheet>
-    </v-carousel-item>
-  </v-carousel>
+  <v-responsive :aspect-ration="3 / 2" class="w-screen">
+    <v-carousel
+      cycle
+      hide-delimiter-background
+      show-arrows-on-hover
+      light
+      height="auto"
+    >
+      <v-carousel-item v-for="(article, i) in this.articles" :key="i" :to="`/articles/${article[0]}`">
+          <v-img :src="article[1].img[0].image[0].url" class="img" contain />
+      </v-carousel-item>
+    </v-carousel>
+  </v-responsive>
 </template>
 
 <script lang="js">
@@ -30,6 +25,7 @@ export default Vue.extend({
   },
   mounted() {
     this.articles = this.$store.getters.recommendArticles;
+    console.log(`${this.articles}`)
   }
 });
 </script>

@@ -40,3 +40,9 @@
   font-weight: 400;
   src: url('~assets/fonts/Spaciouo.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'CyberExpert';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/CyberExpert.ttf') format('truetype');
+}

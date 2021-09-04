@@ -8,12 +8,16 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {},
+    fontFamily: {
+      CyberExpert: "CyberExpert",
+      Espace: "Espace",
+    }
   },
   variants: {
     extend: {}
   },
   plugins: [],
   mode: "jit",
-  important: true,
+  important: true
 };
