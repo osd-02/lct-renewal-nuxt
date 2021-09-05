@@ -5,6 +5,7 @@
       <News id="news-location" />
       <!-- <Articles id="articles-location" /> -->
       <!-- <Profile id="profile-location" /> -->
+      <Works id="works-location" />
     </v-sheet>
   </v-sheet>
 </template>
