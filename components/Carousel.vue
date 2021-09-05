@@ -20,6 +20,9 @@
       <v-sheet color="primary" class="text-center text-3xl sm:text-5xl">
         {{ article[1].title }}
       </v-sheet>
+      <v-sheet color="primary" class="pl-2 text-xs sm:text-base text-right">
+        Photo by {{ article[1].photographer }}
+      </v-sheet>
       <v-responsive :aspect-ration="3 / 2" class="w-screen">
         <v-img :src="article[1].img[0].image[0].url" class="img" contain />
       </v-responsive>
