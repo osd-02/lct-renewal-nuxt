@@ -1,5 +1,5 @@
 <template>
-  <div id="loading-wrapper">
+  <v-sheet id="loading-wrapper" color="sub">
     <div id="contents">
       <v-progress-circular
         :size="100"
@@ -9,12 +9,12 @@
       ></v-progress-circular>
       <p>now loading......</p>
     </div>
-  </div>
+  </v-sheet>
 </template>
 
 <style lang="scss" scoped>
 #loading-wrapper {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
