@@ -18,7 +18,7 @@
       </v-app-bar-title>
       <template v-slot:extension>
         <v-tabs background-color="sub" fixed-tabs>
-          <v-tab class="tabs font-Gentium" v-for="tabItem in tabItems" :key="tabItem.id">
+          <v-tab class="tabs font-Infinity" v-for="tabItem in tabItems" :key="tabItem.id">
             <nuxt-link v-scroll-to="`#${tabItem.linkto}`" to
               >{{ tabItem.title }}
             </nuxt-link>
@@ -52,7 +52,7 @@ export default {
       tabItems: [
         { title: "Home", id: 1, linkto: "home-location" },
         { title: "News", id: 2, linkto: "news-location" },
-        { title: "Profile", id: 3, linkto: "profile-location" }
+        { title: "Works", id: 3, linkto: "works-location" }
       ]
     };
   }

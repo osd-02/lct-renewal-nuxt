@@ -15,6 +15,8 @@ module.exports = {
       Radiation: "Radiation",
       Neuropol: "Neuropol",
       Gentium: "Gentium",
+      Infinity: "Infinity",
+      Spaciouo: "Spaciouo"
     }
   },
   variants: {

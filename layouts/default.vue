@@ -1,8 +1,8 @@
 <template>
     <v-app color="sub">
-      <Header />
+      <Loading v-show="loading"/>
+      <Header v-show="!loading" />
       <v-main>
-        <Loading v-show="loading"/>
         <Nuxt v-show="!loading"/>
       </v-main>
     </v-app>
