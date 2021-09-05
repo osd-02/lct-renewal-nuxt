@@ -1,8 +1,8 @@
 <template>
   <v-sheet id="wrapper">
     <v-container fill-height　fluid>
-      <v-row no-gutters>
-        <v-sheet color="success" class="title-bar">
+      <v-row no-gutters class="block">
+        <v-sheet color="accent" class="title-bar text-2xl pl-3 text-white font-Spaciouo">
           <h5>News</h5>
         </v-sheet>
       </v-row>
@@ -17,7 +17,7 @@
         >
           <v-btn
             class="article rounded-0 font-Gentium h-full"
-            color="sub"
+            color="secondary"
             elevation="0"
             :to="`/articles/${article.id}`"
           >
@@ -63,21 +63,6 @@ export default Vue.extend({
   .container {
     padding: 0;
     margin: 0;
-    .title-bar {
-      width: 100%;
-      height: 4vw;
-      min-height: 20px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      h5 {
-        padding: 0 5vw;
-        -webkit-text-stroke: 1px;
-        -webkit-text-fill-color: white;
-        -webkit-text-stroke-color: white;
-        font-size: 3vw;
-      }
-    }
     .bar-wrapper {
       margin-bottom: 5vw;
       .bar {

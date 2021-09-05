@@ -51,9 +51,9 @@ export default {
           sub: "#e9e3bd",
           primary: "#d14126",
           secondary: "#f9f6e5",
-          accent: "#e4f4e9",
+          accent: "#0f4c81",
           warning: "#aa9e32",
-          success: "#e4f4e9"
+          success: "#1878cc"
         }
       }
     }
