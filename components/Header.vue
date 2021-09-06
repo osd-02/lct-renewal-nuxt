@@ -18,7 +18,7 @@
       </v-app-bar-title>
       <template v-slot:extension>
         <v-tabs background-color="sub" fixed-tabs>
-          <v-tab class="tabs font-Infinity" v-for="tabItem in tabItems" :key="tabItem.id">
+          <v-tab class="tabs font-Spaciouo" v-for="tabItem in tabItems" :key="tabItem.id">
             <nuxt-link v-scroll-to="`#${tabItem.linkto}`" to
               >{{ tabItem.title }}
             </nuxt-link>
