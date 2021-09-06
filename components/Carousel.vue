@@ -5,7 +5,7 @@
     show-arrows-on-hover
     dark
     height="auto"
-    progress-color="#fff"
+    progress-color="primary"
     class="max-h-full"
   >
     <v-carousel-item
@@ -14,20 +14,61 @@
       :to="`/articles/${article[0]}`"
       class="font-Gentium"
     >
-      <v-sheet color="primary" class="pl-2 text-base sm:text-xl">
-        {{ article[1].type }}
-      </v-sheet>
-      <v-sheet color="primary" class="text-center text-3xl sm:text-5xl">
-        {{ article[1].title }}
-      </v-sheet>
-      <v-sheet color="primary" class="pl-2 text-xs sm:text-base text-right">
-        Photo by {{ article[1].photographer }}
-      </v-sheet>
-      <v-responsive :aspect-ration="3 / 2" class="w-screen">
-        <v-img :src="article[1].img[0].image[0].url" class="img" contain />
-      </v-responsive>
-      <v-sheet color="primary" class="text-xs sm:text-base pl-2 pr-2 pb-10 pt-2">
-        {{ article[1].announceBody }}
+      <v-sheet class="w-screen relative">
+        <v-img
+          :src="article[1].img[0].image[0].url"
+          lazy-src="https://picsum.photos/id/11/100/60"
+          class="img"
+          contain
+        >
+          <template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row>
+          </template>
+        </v-img>
+        <v-sheet
+          class="pl-2 pt-5 w-screen absolute top-0 left-0 bg-opacity-0 bg-transparent"
+        >
+          <v-sheet class="bg-opacity-0 bg-transparent">
+            <v-sheet class="text-base sm:text-xl bg-white bg-opacity-70 inline">
+              {{ article[1].type }}
+            </v-sheet>
+          </v-sheet>
+          <v-sheet class="bg-opacity-0 bg-transparent">
+            <v-sheet class="text-3xl sm:text-5xl bg-white bg-opacity-70 inline">
+              {{ article[1].title }}
+            </v-sheet>
+          </v-sheet>
+          <v-sheet v-show="article[1].from" class="bg-opacity-0 bg-transparent">
+            <v-sheet class="text-xs sm:text-base bg-white bg-opacity-70 inline">
+              from {{ article[1].from }}
+            </v-sheet>
+          </v-sheet>
+          <v-sheet class="bg-opacity-0 bg-transparent">
+            <v-sheet class="text-xs sm:text-base bg-white bg-opacity-70 inline">
+              Written by {{ article[1].writer }}
+            </v-sheet>
+          </v-sheet>
+          <v-sheet class="bg-opacity-0 bg-transparent">
+            <v-sheet class="text-xs sm:text-base bg-white bg-opacity-70 inline">
+              Photo by {{ article[1].photographer }}
+            </v-sheet>
+          </v-sheet>
+        </v-sheet>
+        <v-sheet
+          v-show="article[1].announceBody"
+          class="text-right pl-2 pr-2 pb-10 pt-2 w-screen absolute bottom-0 right-0 bg-opacity-0 bg-transparent"
+        >
+          <v-sheet class="bg-opacity-0 bg-transparent">
+            <v-sheet class="text-xs sm:text-base bg-white bg-opacity-70 inline">
+              {{ article[1].announceBody }}
+            </v-sheet>
+          </v-sheet>
+        </v-sheet>
       </v-sheet>
     </v-carousel-item>
   </v-carousel>
