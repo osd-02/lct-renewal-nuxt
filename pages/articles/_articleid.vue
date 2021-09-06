@@ -1,6 +1,36 @@
 <template>
-  <v-sheet>
-    {{ this.article["announceBody"] }}
+  <v-sheet color="secondary" class="min-h-screen wrapper">
+    <v-sheet class="bg-opacity-0 bg-transparent pt-5 pl-2">
+      <v-sheet class="text-xs sm:text-base bg-white bg-opacity-70 inline">
+        {{ this.article.publishDate }}
+      </v-sheet>
+    </v-sheet>
+    <v-sheet class="bg-opacity-0 bg-transparent pl-2">
+      <v-sheet class="text-base sm:text-xl bg-white bg-opacity-80 inline">
+        {{ this.article.type }}
+      </v-sheet>
+    </v-sheet>
+    <v-sheet class="bg-opacity-0 bg-transparent pl-2">
+      <v-sheet class="text-3xl sm:text-5xl bg-white bg-opacity-80 inline">
+        {{ this.article.title }}
+      </v-sheet>
+    </v-sheet>
+    <v-sheet v-show="this.article.from" class="bg-opacity-0 bg-transparent pl-2">
+      <v-sheet class="text-xs sm:text-base bg-white bg-opacity-80 inline">
+        from {{ this.article.from }}
+      </v-sheet>
+    </v-sheet>
+    <v-sheet class="bg-opacity-0 bg-transparent pr-2 text-right">
+      <v-sheet class="text-xs sm:text-base bg-white bg-opacity-80 inline">
+        Written by {{ this.article.writer }}
+      </v-sheet>
+    </v-sheet>
+    <v-sheet class="pl-2 pr-2" color="secondary">
+      <v-divider class="mb-1" />
+      <v-divider class="mb-1" />
+      <v-divider class="mb-1" />
+    </v-sheet>
+    <v-sheet color="secondary" v-html="`${this.article.body}`" class="pl-5 pr-5 pb-5" />
   </v-sheet>
 </template>
 
@@ -24,3 +54,30 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.wrapper ::v-deep div {
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 30px;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  hr {
+    margin-bottom: 16px;
+    size: 3px;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  iframe {
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 5px;
+  }
+}
+</style>
