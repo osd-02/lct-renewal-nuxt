@@ -9,6 +9,7 @@
       <v-row no-gutters>
         <v-col
           cols="12"
+          xs="6"
           sm="6"
           md="4"
           class="article-child-wrapper"
@@ -31,7 +32,7 @@
                   <v-list-item-title class="article-title text-3xl">{{
                     article.title
                   }}</v-list-item-title>
-                  <div class="announce-body">{{ article.announceBody }}</div>
+                  <div class="announce-body">by {{ article.writer }}</div>
                 </v-list-item-content>
               </v-list-item>
             </div>
