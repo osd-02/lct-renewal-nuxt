@@ -10,15 +10,23 @@
       extension-height="45px"
       app
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"><v-icon>mdi-select-all</v-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"
+        ><v-icon>mdi-select-all</v-icon></v-app-bar-nav-icon
+      >
       <v-app-bar-title>
         <div class="title">
-          Lo culture
+          <NuxtLink to="/">
+            Lo culture
+          </NuxtLink>
         </div>
       </v-app-bar-title>
       <template v-slot:extension>
         <v-tabs background-color="sub" fixed-tabs>
-          <v-tab class="tabs font-Spaciouo" v-for="tabItem in tabItems" :key="tabItem.id">
+          <v-tab
+            class="tabs font-Spaciouo"
+            v-for="tabItem in tabItems"
+            :key="tabItem.id"
+          >
             <nuxt-link v-scroll-to="`#${tabItem.linkto}`" to
               >{{ tabItem.title }}
             </nuxt-link>
