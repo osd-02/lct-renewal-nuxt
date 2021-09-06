@@ -1,12 +1,15 @@
 <template>
-  <v-sheet id="wrapper">
-    <v-container fill-height　fluid>
+  <v-sheet id="wrapper" color="secondary">
+    <v-container fill-height fluid>
       <v-row no-gutters class="block">
-        <v-sheet color="accent" class="title-bar text-2xl pl-3 text-white font-Spaciouo">
+        <v-sheet
+          color="accent"
+          class="title-bar text-2xl pl-3 text-white font-Spaciouo"
+        >
           <h5>News</h5>
         </v-sheet>
       </v-row>
-      <v-row no-gutters>
+      <v-row no-gutters color="secondary">
         <v-col
           cols="12"
           xs="6"
@@ -29,10 +32,13 @@
                   <v-list-item-subtitle>
                     {{ article.type }}
                   </v-list-item-subtitle>
-                  <v-list-item-title class="article-title text-3xl">{{
-                    article.title
-                  }}</v-list-item-title>
-                  <div class="announce-body">by {{ article.writer }}</div>
+                  <v-list-item-title
+                    class="article-title text-2xl text-center"
+                    >{{ article.title }}</v-list-item-title
+                  >
+                  <v-list-item-subtitle class="text-right"
+                    >by {{ article.writer }}</v-list-item-subtitle
+                  >
                 </v-list-item-content>
               </v-list-item>
             </div>
