@@ -14,7 +14,7 @@
       :to="`/articles/${article[0]}`"
       class="font-Gentium"
     >
-      <v-sheet class="w-screen relative">
+      <v-sheet class="w-full relative">
         <v-img
           :src="article[1].img[0].image[0].url"
           lazy-src="https://picsum.photos/id/11/100/60"
