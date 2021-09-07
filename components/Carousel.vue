@@ -14,7 +14,7 @@
       :to="`/articles/${article[0]}`"
       class="font-Gentium"
     >
-      <v-sheet class="w-screen relative">
+      <v-sheet class="w-full relative">
         <v-img
           :src="article[1].img[0].image[0].url"
           lazy-src="https://picsum.photos/id/11/100/60"
@@ -66,7 +66,7 @@
         </v-sheet>
         <v-sheet
           v-show="article[1].announceBody"
-          class="text-right pl-2 pr-2 pb-10 pt-2 w-screen absolute bottom-0 right-0 bg-opacity-0 bg-transparent"
+          class="text-right pl-2 pr-2 pb-10 pt-2 absolute bottom-0 right-0 bg-opacity-0 bg-transparent"
         >
           <v-sheet class="bg-opacity-0 bg-transparent">
             <v-sheet class="text-xs sm:text-base bg-white bg-opacity-70 inline">
