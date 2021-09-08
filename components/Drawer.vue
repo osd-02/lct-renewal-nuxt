@@ -7,40 +7,41 @@
     color="accent"
     temporary
     style="width: 50vw"
-    class="font-Gentium"
+    class="font-Gentium text-white"
   >
-    <div id="wrapper-contents" class="text-white">
+    <div id="wrapper-contents">
       <v-list>
         <v-list-item>
           <v-list-item-content>
-            <v-list-item-title class="title">
+            <v-list-item-title class="text-white text-4xl pt-2 pb-2">
               lo-culture
             </v-list-item-title>
-            <v-list-item-subtitle >
-              Thanks to local
+            <v-list-item-subtitle>
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
 
-      <v-divider />
+      <v-divider class="mb-1" color="white" />
+      <v-divider class="mb-1" color="white" />
+      <v-divider class="mb-1" color="white" />
 
       <v-list id="d-wrapper">
         <v-list-item v-for="drawerItem in drawerItems" :key="drawerItem.id">
           <v-list-item-title>
-            <NuxtLink :to="`${drawerItem.link}`" class="text-white">
+            <NuxtLink :to="`${drawerItem.link}`" class="text-white underline">
              {{ drawerItem.title }}
             </NuxtLink>
           </v-list-item-title>
         </v-list-item>
       </v-list>
 
-      <v-divider />
+      <v-divider color="white"/>
 
       <v-list id="d-footer">
         <v-list-item id="d-footer-item">
           <v-list-item-content id="d-footer-item-content">
-            <v-list-item-subtitle id="d-footer-item-content-subtitle">
+            <v-list-item-subtitle id="d-footer-item-content-subtitle" class="text-white">
               copyright ©︎lct
             </v-list-item-subtitle>
           </v-list-item-content>
@@ -76,8 +77,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$title-height: 82px;
+$title-height: 98px;
 $footer-height: 32px;
+$divider-height: 15px;
 #wrapper {
   #wrapper-contents {
     height: 100%;
@@ -89,7 +91,7 @@ $footer-height: 32px;
   }
 
   #d-wrapper {
-    height: calc(100% - #{$title-height} - #{$footer-height});
+    height: calc(100% - #{$title-height} - #{$footer-height} - #{$divider-height});
     display: flex;
     flex-flow: column;
   }
