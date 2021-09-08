@@ -1,6 +1,14 @@
 <template>
   <v-sheet color="secondary min-h-screen w-full">
     <v-container fill-height fluid class="p-0 m-0">
+      <v-row no-gutters class="block">
+        <v-sheet
+          color="accent"
+          class="title-bar text-2xl pl-3 text-white font-Gentium"
+        >
+          <h5>Soted by {{ this.type }}</h5>
+        </v-sheet>
+      </v-row>
       <v-row no-gutters color="secondary">
         <v-col
           cols="12"
@@ -20,7 +28,9 @@
             <div class="article-text w-full normal-case">
               <v-list-item>
                 <v-list-item-content>
-                  <v-list-item-body class="text-left">{{ article.publishDate }}</v-list-item-body>
+                  <v-list-item-body class="text-left">{{
+                    article.publishDate
+                  }}</v-list-item-body>
                   <v-list-item-subtitle class="text-left">
                     {{ article.type }}
                   </v-list-item-subtitle>
@@ -62,6 +72,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

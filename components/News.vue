@@ -30,7 +30,9 @@
                 <v-list-item-content>
                   <v-list-item-body>{{ article.publishDate }}</v-list-item-body>
                   <v-list-item-subtitle>
-                    {{ article.type }}
+                    <NuxtLink :to="`${article.type}`">
+                      {{ article.type }}
+                    </NuxtLink>
                   </v-list-item-subtitle>
                   <v-list-item-title
                     class="article-title text-2xl text-center"

@@ -8,7 +8,9 @@
       </v-sheet>
       <v-sheet class="bg-opacity-0 bg-transparent pl-2">
         <v-sheet class="text-base sm:text-xl bg-white bg-opacity-80 inline">
-          {{ this.article.type }}
+          <NuxtLink :to="`../${this.article.type}`">
+            {{ this.article.type }}
+          </NuxtLink>
         </v-sheet>
       </v-sheet>
       <v-sheet class="bg-opacity-0 bg-transparent pl-2">
