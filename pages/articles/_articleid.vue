@@ -1,5 +1,5 @@
 <template>
-  <v-sheet color="secondary">
+  <v-sheet color="secondary" id="top">
     <v-sheet color="secondary" class="min-h-screen wrapper">
       <v-sheet class="bg-opacity-0 bg-transparent pt-5 pl-2">
         <v-sheet class="text-xs sm:text-base bg-white bg-opacity-70 inline">
@@ -18,7 +18,10 @@
           {{ this.article.title }}
         </v-sheet>
       </v-sheet>
-      <v-sheet v-show="this.article.from" class="bg-opacity-0 bg-transparent pl-2">
+      <v-sheet
+        v-show="this.article.from"
+        class="bg-opacity-0 bg-transparent pl-2"
+      >
         <v-sheet class="text-xs sm:text-base bg-white bg-opacity-80 inline">
           from {{ this.article.from }}
         </v-sheet>
@@ -33,8 +36,13 @@
         <v-divider class="mb-1" />
         <v-divider class="mb-1" />
       </v-sheet>
-      <v-sheet color="secondary" v-html="`${this.article.body}`" class="pl-5 pr-5 pb-5" />
+      <v-sheet
+        color="secondary"
+        v-html="`${this.article.body}`"
+        class="pl-5 pr-5 pb-5"
+      />
     </v-sheet>
+    <v-sheet id="bottom" />
   </v-sheet>
 </template>
 
@@ -43,7 +51,7 @@ export default {
   head() {
     return {
       title: "articles | " + this.article.title
-    }
+    };
   },
   data() {
     return {
@@ -91,6 +99,9 @@ export default {
     width: 100%;
     margin-bottom: 16px;
     border-radius: 5px;
+  }
+  a {
+    text-decoration: underline;
   }
 }
 </style>

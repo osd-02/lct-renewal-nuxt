@@ -24,12 +24,12 @@
         <v-tabs background-color="sub" fixed-tabs>
           <v-tab
             class="tabs font-Spaciouo"
-            v-for="tabItem in tabItems"
+            v-for="tabItem in setTab()"
             :key="tabItem.id"
           >
-            <nuxt-link v-scroll-to="`#${tabItem.linkto}`" to
+            <NuxtLink v-scroll-to="`#${tabItem.linkto}`" to
               >{{ tabItem.title }}
-            </nuxt-link>
+            </NuxtLink>
           </v-tab>
         </v-tabs>
       </template>
@@ -51,6 +51,15 @@ export default {
       }
     }
   },
+  methods: {
+    setTab() {
+      if (this.$nuxt.$route.name == 'index' & !this.$vuetify.breakpoint.md & !this.$vuetify.breakpoint.lg & !this.$vuetify.breakpoint.xl) {
+        return this.tabItems
+      } else {
+        return this.tabItemsForPages
+      }
+    }
+  },
   components: {
     Drawer
   },
@@ -61,6 +70,10 @@ export default {
         { title: "Home", id: 1, linkto: "home-location" },
         { title: "News", id: 2, linkto: "news-location" },
         { title: "Works", id: 3, linkto: "works-location" }
+      ],
+      tabItemsForPages: [
+        { title: "Top", id: 1, linkto: "top" },
+        { title: "Bottom", id: 1, linkto: "bottom" }
       ]
     };
   }
