@@ -9,15 +9,15 @@
     style="width: 50vw"
     class="font-Gentium"
   >
-    <div id="wrapper-contents">
+    <div id="wrapper-contents" class="text-white">
       <v-list>
         <v-list-item>
           <v-list-item-content>
             <v-list-item-title class="title">
-              Contents navi
+              lo-culture
             </v-list-item-title>
-            <v-list-item-subtitle>
-              lct
+            <v-list-item-subtitle >
+              Thanks to local
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -28,7 +28,9 @@
       <v-list id="d-wrapper">
         <v-list-item v-for="drawerItem in drawerItems" :key="drawerItem.id">
           <v-list-item-title>
-            {{ drawerItem.title }}
+            <NuxtLink :to="`${drawerItem.link}`" class="text-white">
+             {{ drawerItem.title }}
+            </NuxtLink>
           </v-list-item-title>
         </v-list-item>
       </v-list>
@@ -53,9 +55,14 @@ export default {
   data() {
     return {
       drawerItems: [
-        { title: "New post", id: 1 },
-        { title: "Articles", id: 2 },
-        { title: "Review", id: 3 }
+        { title: "Disk review", id: 1 ,link: "/disk-review"},
+        { title: "Movie review", id: 2 ,link: "/movie-review"},
+        { title: "Book review", id: 3 ,link: "/book-review"},
+        { title: "live report", id: 4 ,link: "/live-report"},
+        { title: "Interview", id: 5 ,link: "/interview"},
+        { title: "column", id: 6 ,link: "/column"},
+        { title: "activity", id: 7 ,link: "/activity"},
+        { title: "memodandum", id: 8 ,link: "/memorandum"}
       ]
     };
   },
@@ -79,7 +86,6 @@ $footer-height: 32px;
     bottom: 0;
     left: 0;
     position: fixed;
-    width: 50vw;
   }
 
   #d-wrapper {
