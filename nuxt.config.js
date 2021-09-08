@@ -87,7 +87,7 @@ export default {
   plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto"],
 
   "google-gtag": {
-    id: "G-YF2DXSCTKC", //サイトのID
+    id: "G-QJSRFDP4P2", //サイトのID
     debug: false // 開発環境でも表示したい場合
   }
 };
