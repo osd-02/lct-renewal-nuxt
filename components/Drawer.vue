@@ -14,9 +14,14 @@
         <v-list-item>
           <v-list-item-content>
             <v-list-item-title class="text-white text-4xl pt-2 pb-2">
-              lo-culture
+              <NuxtLink to="/" class="text-white">
+               lo-culture
+              </NuxtLink>
             </v-list-item-title>
             <v-list-item-subtitle>
+              <NuxtLink to="profile" class="text-white underline">
+                profile
+              </NuxtLink>
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -77,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$title-height: 98px;
+$title-height: 114px;
 $footer-height: 32px;
 $divider-height: 15px;
 #wrapper {
