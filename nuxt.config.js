@@ -40,7 +40,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/dotenv"],
+  modules: ["@nuxtjs/dotenv", '@nuxtjs/google-gtag'],
 
   vuetify: {
     theme: {
@@ -84,11 +84,10 @@ export default {
     FLAMELINK_MEASUREMENT_ID: process.env.FLAMELINK_MEASUREMENT_ID
   },
 
-  plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto"]
+  plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto"],
 
-  // module.exports = {
-  //   css: [
-  //     '@/assets/css/main.css',
-  //   ]
-  // },
+  'google-gtag': {
+    id: 'G-YF2DXSCTKC',  //サイトのID
+    debug: false,  // 開発環境でも表示したい場合
+  }
 };
