@@ -1,6 +1,6 @@
 <template>
   <v-sheet id="wrapper" color="sub" class="p-0">
-    <v-sheet class="text-white text-2xl pl-3 font-Spaciouo" color="accent">
+    <v-sheet class="text-white text-2xl pl-3 font-Gentium" color="accent">
       Works
     </v-sheet>
     <Podcast />

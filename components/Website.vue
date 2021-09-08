@@ -1,6 +1,6 @@
 <template>
   <v-sheet id="wrapper" color="sub">
-    <v-sheet color="success" class="text-xl text-white pl-6 font-Spaciouo">
+    <v-sheet color="success" class="text-xl text-white pl-6 font-Gentium">
       <h5>Website</h5>
     </v-sheet>
     <v-sheet color="sub">

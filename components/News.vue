@@ -4,7 +4,7 @@
       <v-row no-gutters class="block">
         <v-sheet
           color="accent"
-          class="title-bar text-2xl pl-3 text-white font-Spaciouo"
+          class="title-bar text-2xl pl-3 text-white font-Gentium"
         >
           <h5>News</h5>
         </v-sheet>
@@ -30,7 +30,9 @@
                 <v-list-item-content>
                   <v-list-item-body>{{ article.publishDate }}</v-list-item-body>
                   <v-list-item-subtitle>
-                    {{ article.type }}
+                    <NuxtLink :to="`${article.type}`">
+                      {{ article.type }}
+                    </NuxtLink>
                   </v-list-item-subtitle>
                   <v-list-item-title
                     class="article-title text-2xl text-center"
