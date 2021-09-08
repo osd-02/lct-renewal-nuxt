@@ -10,8 +10,8 @@
       extension-height="45px"
       app
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"
-        ><v-icon>mdi-select-all</v-icon></v-app-bar-nav-icon
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="z-10"
+        ><v-icon>mdi-menu</v-icon></v-app-bar-nav-icon
       >
       <v-app-bar-title>
         <div class="title">
