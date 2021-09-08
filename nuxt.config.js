@@ -8,7 +8,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "lct-nuxt",
+    titleTemplate: "lo-culture | %s",
     htmlAttrs: {
       lang: "en"
     },
@@ -40,7 +40,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/dotenv", '@nuxtjs/google-gtag'],
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/google-gtag"],
 
   vuetify: {
     theme: {
@@ -64,10 +64,10 @@ export default {
     extend: function(config, { isDev, isClient }) {
       config.node = {
         fs: "empty",
-        child_process: 'empty',
-        net: 'empty',
-        dns: 'empty',
-        tls: 'empty'
+        child_process: "empty",
+        net: "empty",
+        dns: "empty",
+        tls: "empty"
       };
     }
   },
@@ -86,8 +86,8 @@ export default {
 
   plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto"],
 
-  'google-gtag': {
-    id: 'G-YF2DXSCTKC',  //サイトのID
-    debug: false,  // 開発環境でも表示したい場合
+  "google-gtag": {
+    id: "G-YF2DXSCTKC", //サイトのID
+    debug: false // 開発環境でも表示したい場合
   }
 };

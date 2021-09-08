@@ -20,6 +20,11 @@ function formatTime (object, after) {
 }
 
 export default Vue.extend({
+  head() {
+    return {
+      title: 'home'
+    }
+  }
 });
 </script>
 
