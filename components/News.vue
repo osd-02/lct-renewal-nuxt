@@ -4,7 +4,7 @@
       <v-row no-gutters class="block">
         <v-sheet
           color="accent"
-          class="title-bar text-2xl pl-3 text-white font-Spaciouo"
+          class="title-bar text-2xl pl-3 text-white font-Gentium"
         >
           <h5>News</h5>
         </v-sheet>
