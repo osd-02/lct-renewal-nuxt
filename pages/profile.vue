@@ -11,6 +11,11 @@ import Vue from "vue";
 import Drawer from "~/components/Drawer.vue";
 
 export default Vue.extend({
+    head() {
+    return {
+      title: 'profile'
+    }
+  }
 });
 </script>
 

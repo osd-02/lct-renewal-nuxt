@@ -53,6 +53,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.type
+    }
+  },
   data() {
     return {
       type: this.$route.params.sortType,

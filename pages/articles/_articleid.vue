@@ -40,6 +40,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "articles | " + this.article.title
+    }
+  },
   data() {
     return {
       articleid: this.$route.params.articleid,
