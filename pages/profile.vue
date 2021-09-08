@@ -1,8 +1,9 @@
 <template>
   <v-sheet id="wrapper">
-    <v-sheet width="100%" min-height="100vh" id="home-location">
+    <v-sheet width="100%" min-height="100vh" id="top">
       <Profile id="profile-location" />
     </v-sheet>
+    <v-sheet id="bottom" />
   </v-sheet>
 </template>
 

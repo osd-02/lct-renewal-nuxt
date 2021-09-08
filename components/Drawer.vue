@@ -94,9 +94,9 @@ $divider-height: 15px;
     left: 0;
     position: fixed;
   }
-
   #d-wrapper {
     height: calc(100% - #{$title-height} - #{$footer-height} - #{$divider-height});
+    padding-left: 10vw;
     display: flex;
     flex-flow: column;
   }

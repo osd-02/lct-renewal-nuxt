@@ -13,38 +13,45 @@
         <v-col
           cols="12"
           xs="6"
-          sm="6"
-          md="4"
+          sm="12"
           class="article-child-wrapper"
+          color="secondary"
           v-for="article in this.articles"
           v-bind:key="article.publishDate"
         >
-          <v-btn
-            class="article rounded-0 font-Gentium h-full"
-            color="secondary"
-            elevation="0"
-            :to="`/articles/${article.id}`"
-          >
-            <div class="article-text">
-              <v-list-item>
-                <v-list-item-content>
-                  <v-list-item-body>{{ article.publishDate }}</v-list-item-body>
-                  <v-list-item-subtitle>
-                    <NuxtLink :to="`${article.type}`">
-                      {{ article.type }}
-                    </NuxtLink>
-                  </v-list-item-subtitle>
-                  <v-list-item-title
-                    class="article-title text-2xl text-center"
-                    >{{ article.title }}</v-list-item-title
-                  >
-                  <v-list-item-subtitle class="text-right"
-                    >by {{ article.writer }}</v-list-item-subtitle
-                  >
-                </v-list-item-content>
-              </v-list-item>
-            </div>
-          </v-btn>
+          <v-sheet color="secondary" class="pl-2 pt-1 pb-1 pr-2 h-full">
+            <v-btn
+              class="article rounded-2 font-Gentium h-full w-full"
+              color="sub"
+              :to="`/articles/${article.id}`"
+              elevation="2"
+            >
+              <div class="article-text">
+                <v-list-item>
+                  <v-list-item-content>
+                    <v-list-item-subtitle class="underline">
+                      <NuxtLink :to="`${article.type}`">
+                        {{ article.type }}
+                      </NuxtLink>
+                    </v-list-item-subtitle>
+                    <v-list-item-body class="text-xs">{{
+                      article.publishDate
+                    }}</v-list-item-body>
+                    <v-list-item-body class="text-xs">
+                      {{ article.announceBody }}
+                    </v-list-item-body>
+                    <v-list-item-title
+                      class="article-title text-2xl text-center"
+                      >{{ article.title }}</v-list-item-title
+                    >
+                    <v-list-item-subtitle class="text-right"
+                      >by {{ article.writer }}</v-list-item-subtitle
+                    >
+                  </v-list-item-content>
+                </v-list-item>
+              </div>
+            </v-btn>
+          </v-sheet>
         </v-col>
       </v-row>
     </v-container>
