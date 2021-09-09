@@ -42,14 +42,6 @@ import Drawer from "./Drawer.vue";
 
 export default {
   computed: {
-    tabShow() {
-      switch (this.$vuetify.breakpoint.name) {
-        case "xs":
-          return false;
-        default:
-          return true;
-      }
-    }
   },
   methods: {
     setTab() {
