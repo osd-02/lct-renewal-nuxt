@@ -19,7 +19,7 @@
               </NuxtLink>
             </v-list-item-title>
             <v-list-item-subtitle>
-              <NuxtLink to="profile" class="text-white underline">
+              <NuxtLink to="/profile" class="text-white underline">
                 profile
               </NuxtLink>
             </v-list-item-subtitle>

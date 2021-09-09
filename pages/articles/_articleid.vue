@@ -13,7 +13,7 @@
           </NuxtLink>
         </v-sheet>
       </v-sheet>
-      <v-sheet class="bg-opacity-0 bg-transparent pl-2">
+      <v-sheet class="bg-opacity-0 bg-transparent ml-2 m-2">
         <v-sheet class="text-3xl sm:text-5xl bg-white bg-opacity-80 inline">
           {{ this.article.title }}
         </v-sheet>
@@ -67,7 +67,6 @@ export default {
         this.article = this.articles[i];
       }
     }
-    console.log(this.article);
   }
 };
 </script>
