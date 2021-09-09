@@ -1,19 +1,23 @@
 <template>
-  <v-sheet id="wrapper">
-    <v-container>
-      <v-row no-gutters>
-        <v-sheet color="success" class="title-bar">
-          <h5>Profile</h5>
+  <v-sheet color="secondary" id="top">
+    <v-sheet color="secondary" class="min-h-screen wrapper">
+      <v-sheet class="bg-opacity-0 bg-transparent pt-5 pl-2 pb-5">
+        <v-sheet class="text-3xl sm:text-5xl bg-white bg-opacity-80 inline">
+          Profile + 
         </v-sheet>
-      </v-row>
-      <v-row no-gutters>
-        <v-col cols="12" class="article-child-wrapper">
-          <v-sheet class="profile-body" id="about-loculture">
-            <div class="profile-body-wrapper" v-html="`${this.profile}`" />
-          </v-sheet>
-        </v-col>
-      </v-row>
-    </v-container>
+      </v-sheet>
+      <v-sheet class="pl-2 pr-2" color="secondary">
+        <v-divider class="mb-1" />
+        <v-divider class="mb-1" />
+        <v-divider class="mb-1" />
+      </v-sheet>
+      <v-sheet
+        color="secondary"
+        v-html="`${this.profile}`"
+        class="pl-5 pr-5 pb-5"
+      />
+    </v-sheet>
+    <v-sheet id="bottom" />
   </v-sheet>
 </template>
 
@@ -21,6 +25,11 @@
 import Vue from "vue";
 
 export default Vue.extend({
+  head() {
+    return {
+      title: "profile"
+    };
+  },
   data: () => ({
     profile: null
   }),
@@ -31,46 +40,35 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.container {
-  padding: 0;
-  margin: 0;
-  .title-bar {
+.wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+.wrapper ::v-deep div {
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 30px;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  hr {
+    margin-bottom: 16px;
+    size: 3px;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  iframe {
     width: 100%;
-    height: 4vw;
-    min-height: 20px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    h5 {
-      padding: 0 5vw;
-      -webkit-text-stroke: 1px;
-      -webkit-text-fill-color: white;
-      -webkit-text-stroke-color: white;
-      font-size: 3vw;
-    }
+    margin-bottom: 16px;
+    border-radius: 5px;
   }
-  .bar-wrapper {
-    margin-bottom: 5vw;
-    .bar {
-      width: 4vw;
-      min-width: 20px;
-      height: 100%;
-      margin-left: auto;
-    }
-  }
-  .article-child-wrapper {
-    .profile-body {
-      margin: 5vw;
-      .profile-body-wrapper {
-        padding: 5vw;
-        border: solid;
-        border-color: #d14126;
-        word-wrap:break-all;
-        pre {
-            white-space: pre-wrap ;
-        }
-      }
-    }
+  a {
+    text-decoration: underline;
   }
 }
 </style>
