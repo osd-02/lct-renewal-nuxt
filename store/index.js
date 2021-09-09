@@ -1,6 +1,7 @@
 export const state = () => ({
   articles: null,
-  profile: null
+  profile: null,
+  recommendArticles: null
 });
 
 export const getters = {
@@ -32,25 +33,42 @@ export const actions = {
       populate: true
     });
 
-    // データ加工
+    
+    // 初期データを公開順にソート及び分類に必要なものを追加
+    const nowDate = new Date();
     const myarticles = Object.entries(getArticles)
-      .map(([k, v]) => {
-        const createdDate = new Date(v._fl_meta_.createdDate._seconds * 1000);
-        v.createdDate = createdDate; // (1)
-        return v;
-      })
-      .sort((a, b) => (a.createdDate > b.createdDate ? -1 : 1)); // (3)
+    .map(([k, v]) => {
+      const createdDate = new Date(v.publishDate);
+      v.createdDate = createdDate;
+      if (v.createdDate > nowDate) {
+        v.delete = true;
+      } else {
+        v.delete = false;
+      };
+      return v;
+    })
+    .sort((a, b) => (a.createdDate > b.createdDate ? -1 : 1));
 
-    for (const id in getArticles) {
-      if (getArticles[id].recommend == false) {
-        delete getArticles[id]
+    
+    // 初期データの公開前記事を削除
+    let db = { ...myarticles }
+    for (const id in db) {
+      if (db[id].delete == true) {
+        delete db[id]
       };
     }
-
-    const myrecommendArticles = Object.entries(getArticles)
+    
+    // カルーセル用のデータベース作成
+    let recommend = { ...db }
+    for (const id in recommend) {
+      if (recommend[id].recommend == false) {
+        delete recommend[id]
+      };
+    }
+    const myrecommendArticles = Object.entries(recommend)
     
     const myprofile = getProfile;
-    commit("FETCH_POST_ARTICLES", myarticles);
+    commit("FETCH_POST_ARTICLES", db);
     commit("FETCH_POST_RECOMMENDARTICLES", myrecommendArticles);
     commit("FETCH_POST_PROFILE", myprofile.body);
   }

@@ -16,8 +16,8 @@
           sm="12"
           class="article-child-wrapper"
           color="secondary"
-          v-for="article in this.articles"
-          v-bind:key="article.publishDate"
+          v-for="(article, i) in this.articles"
+          v-bind:key="i"
         >
           <v-sheet color="secondary" class="pl-2 pt-1 pb-1 pr-2 h-full">
             <v-btn
@@ -34,9 +34,9 @@
                         {{ article.type }}
                       </NuxtLink>
                     </v-list-item-subtitle>
-                    <v-list-item-body class="text-xs">{{
-                      article.publishDate
-                    }}</v-list-item-body>
+                    <v-list-item-body class="text-xs">
+                      {{ article.publishDate }}
+                    </v-list-item-body>
                     <v-list-item-body class="text-xs">
                       {{ article.announceBody }}
                     </v-list-item-body>
@@ -60,7 +60,6 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { mapMutations } from "vuex";
 
 export default Vue.extend({
   data: () => ({
@@ -68,6 +67,7 @@ export default Vue.extend({
   }),
   mounted() {
     this.articles = this.$store.getters.articles;
+    console.log(this.articles)
   }
 });
 </script>
