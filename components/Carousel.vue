@@ -11,7 +11,7 @@
     <v-carousel-item
       v-for="(article, i) in this.articles"
       :key="i"
-      :to="`/articles/${article[0]}`"
+      :to="`/articles/${article[1].id}`"
       class="font-Gentium"
     >
       <v-sheet class="w-full relative">
