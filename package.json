@@ -27,7 +27,8 @@
     "node-sass": "^6.0.1",
     "nuxt": "^2.15.7",
     "sass-loader": "10.1.1",
-    "vue-scrollto": "^2.20.0"
+    "vue-scrollto": "^2.20.0",
+    "vuex-persistedstate": "^4.0.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.7",

@@ -84,7 +84,7 @@ export default {
     FLAMELINK_MEASUREMENT_ID: process.env.FLAMELINK_MEASUREMENT_ID
   },
 
-  plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto"],
+  plugins: ["@/plugins/flamelink", "@/plugins/vue-scrollto", { src: '@/plugins/vuex-persistedstate.js', ssr: false}],
 
   "google-gtag": {
     id: "G-QJSRFDP4P2", //サイトのID
