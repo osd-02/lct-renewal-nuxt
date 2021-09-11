@@ -39,7 +39,9 @@
             </v-sheet>
           </v-sheet>
           <v-sheet class="bg-opacity-0 bg-transparent">
-            <v-sheet class="text-base sm:text-xl bg-white bg-opacity-70 inline underline">
+            <v-sheet
+              class="text-base sm:text-xl bg-white bg-opacity-70 inline underline"
+            >
               <NuxtLink :to="`${article[1].type}`">
                 {{ article[1].type }}
               </NuxtLink>
