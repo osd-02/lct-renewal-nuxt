@@ -43,8 +43,6 @@ export const actions = {
     // 初期データを公開順にソート及び分類に必要なものを追加
     const nowDate = new Date();
     const newsFilterDate = new Date().setMonth(nowDate.getMonth() - 1)
-    console.log(newsFilterDate)
-    console.log(nowDate)
 
     const myarticles = Object.entries(getArticles)
     .map(([k, v]) => {

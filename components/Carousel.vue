@@ -92,7 +92,6 @@ export default Vue.extend({
   },
   mounted() {
     this.articles = this.$store.getters.recommendArticles;
-    console.log(this.articles)
   }
 });
 </script>

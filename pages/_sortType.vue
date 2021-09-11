@@ -73,7 +73,6 @@ export default {
         this.sortedArticles[i] = this.articles[i];
       }
     }
-    console.log(this.sortedArticles);
   }
 };
 </script>
