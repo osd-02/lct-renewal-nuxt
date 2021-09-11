@@ -55,6 +55,9 @@ export default {
           warning: "#aa9e32",
           success: "#1878cc"
         }
+      },
+      font: {
+        family: 'Gentium'
       }
     }
   },
