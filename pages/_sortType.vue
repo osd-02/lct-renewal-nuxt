@@ -29,7 +29,7 @@
               <v-list-item>
                 <v-list-item-content>
                   <v-list-item-body class="text-left">{{
-                    article.publishDate
+                    article.date
                   }}</v-list-item-body>
                   <v-list-item-subtitle class="text-left">
                     {{ article.type }}
@@ -73,7 +73,6 @@ export default {
         this.sortedArticles[i] = this.articles[i];
       }
     }
-    console.log(this.sortedArticles);
   }
 };
 </script>

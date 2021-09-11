@@ -34,12 +34,12 @@
                         {{ article.type }}
                       </NuxtLink>
                     </v-list-item-subtitle>
-                    <v-list-item-body class="text-xs">
-                      {{ article.publishDate }}
-                    </v-list-item-body>
-                    <v-list-item-body class="text-xs">
+                    <v-list-item-content class="text-xs">
+                      {{ article.date }}
+                    </v-list-item-content>
+                    <v-list-item-content class="text-xs">
                       {{ article.announceBody }}
-                    </v-list-item-body>
+                    </v-list-item-content>
                     <v-list-item-title
                       class="article-title text-2xl text-center"
                       >{{ article.title }}</v-list-item-title
@@ -66,8 +66,7 @@ export default Vue.extend({
     articles: null
   }),
   mounted() {
-    this.articles = this.$store.getters.articles;
-    console.log(this.articles)
+    this.articles = this.$store.getters.newsArticles;
   }
 });
 </script>

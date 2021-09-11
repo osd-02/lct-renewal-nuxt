@@ -35,7 +35,7 @@
         >
           <v-sheet class="bg-opacity-0 bg-transparent">
             <v-sheet class="text-base sm:text-xl bg-white bg-opacity-70 inline">
-              {{ article[1].publishDate }}
+              {{ article[1].date }}
             </v-sheet>
           </v-sheet>
           <v-sheet class="bg-opacity-0 bg-transparent">
@@ -92,7 +92,6 @@ export default Vue.extend({
   },
   mounted() {
     this.articles = this.$store.getters.recommendArticles;
-    console.log(this.articles)
   }
 });
 </script>

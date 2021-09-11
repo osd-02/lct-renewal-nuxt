@@ -65,7 +65,7 @@ export default {
       ],
       tabItemsForPages: [
         { title: "Top", id: 1, linkto: "top" },
-        { title: "Bottom", id: 1, linkto: "bottom" }
+        { title: "Bottom", id: 2, linkto: "bottom" }
       ]
     };
   }
