@@ -66,8 +66,7 @@ export default Vue.extend({
     articles: null
   }),
   mounted() {
-    this.articles = this.$store.getters.articles;
-    console.log(this.articles)
+    this.articles = this.$store.getters.newsArticles;
   }
 });
 </script>
