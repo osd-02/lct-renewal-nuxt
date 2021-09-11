@@ -31,7 +31,7 @@
               <v-img
                 v-if="article.img"
                 :src="article.img[0].image[0].url"
-                lazy-src="https://picsum.photos/id/11/100/60"
+                :lazy-src="require(`~/assets/img/loading2.jpg`)"
                 class="rounded-lg"
                 height="200px"
               >

@@ -17,7 +17,7 @@
       <v-sheet class="w-full relative">
         <v-img
           :src="article[1].img[0].image[0].url"
-          lazy-src="https://picsum.photos/id/11/100/60"
+          :lazy-src="require(`~/assets/img/loading.jpg`)"
           class="img"
           contain
         >
