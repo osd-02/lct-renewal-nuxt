@@ -7,7 +7,7 @@
             color="accent"
             class="relative top-1 left-1 pl-2 pr-2 text-3xl text-white bg-opacity-70 inline"
           >
-            News
+            New Articles
           </v-sheet>
         </v-sheet>
       </v-row>
