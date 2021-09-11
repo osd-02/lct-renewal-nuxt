@@ -3,7 +3,7 @@
     <v-sheet color="secondary" class="min-h-screen wrapper">
       <v-sheet class="bg-opacity-0 bg-transparent pt-5 pl-2">
         <v-sheet class="text-xs sm:text-base bg-white bg-opacity-70 inline">
-          {{ this.article.publishDate }}
+          {{ this.article.date }}
         </v-sheet>
       </v-sheet>
       <v-sheet class="bg-opacity-0 bg-transparent pl-2">

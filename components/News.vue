@@ -35,7 +35,7 @@
                       </NuxtLink>
                     </v-list-item-subtitle>
                     <v-list-item-body class="text-xs">
-                      {{ article.publishDate }}
+                      {{ article.date }}
                     </v-list-item-body>
                     <v-list-item-body class="text-xs">
                       {{ article.announceBody }}
