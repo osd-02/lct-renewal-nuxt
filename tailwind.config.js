@@ -10,12 +10,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      CyberExpert: "CyberExpert",
-      Espace: "Espace",
-      Radiation: "Radiation",
-      Neuropol: "Neuropol",
       Gentium: "Gentium",
-      Infinity: "Infinity",
       Spaciouo: "Spaciouo"
     }
   },
