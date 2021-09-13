@@ -14,26 +14,25 @@
       <v-row no-gutters color="secondary" class="w-full">
         <v-col
           cols="12"
-          xs="6"
+          sm="6"
           md="4"
           lg="3"
           color="secondary"
           v-for="(article, i) in this.sortedArticles"
           v-bind:key="i"
-          class="pl-4 pr-4 pt-2 pb-2"
+          class="pl-2 pr-2 pt-2 pb-2"
         >
           <v-btn
-            class="article font-Gentium h-full w-full p-0 block rounded-lg normal-case whitespace-normal"
+            class="article font-Gentium h-full w-full p-0 block normal-case whitespace-normal"
             color="sub"
             :to="`/articles/${article.id}`"
             elevation="2"
           >
-            <v-sheet class="relative w-full rounded-lg">
+            <v-sheet class="relative w-full">
               <v-img
                 v-if="article.img"
                 :src="article.img[0].image[0].url"
                 :lazy-src="require(`~/assets/img/loading2.jpg`)"
-                class="rounded-lg"
                 height="200px"
               >
                 <template v-slot:placeholder>
