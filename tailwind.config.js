@@ -11,7 +11,8 @@ module.exports = {
     extend: {},
     fontFamily: {
       Gentium: "Gentium",
-      Spaciouo: "Spaciouo"
+      Spaciouo: "Spaciouo",
+      Infinity: "Infinity"
     }
   },
   variants: {

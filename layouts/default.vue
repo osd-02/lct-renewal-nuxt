@@ -1,17 +1,17 @@
 <template>
-    <v-app color="sub">
-      <Loading v-show="loading"/>
-      <Header v-show="!loading" />
-      <v-main>
-        <Nuxt v-show="!loading"/>
-      </v-main>
-    </v-app>
+  <v-app color="sub">
+    <Loading v-show="loading" />
+    <Header v-show="!loading" />
+    <v-main v-show="!loading">
+      <Nuxt />
+    </v-main>
+  </v-app>
 </template>
 
 <style lang="scss" scoped>
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+    Roboto, "Helvetica Neue", '游明朝', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -26,13 +26,11 @@ html {
 export default {
   data() {
     return {
-      loading: true,
-    }
+      loading: true
+    };
   },
   mounted() {
-    setTimeout(() => {
-      this.loading = false;
-    }, 1000);
-  },
+    this.loading = false;
+  }
 };
 </script>
