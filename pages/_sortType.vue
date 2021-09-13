@@ -20,7 +20,7 @@
           color="secondary"
           v-for="(article, i) in this.sortedArticles"
           v-bind:key="i"
-          class="pl-4 pr-4 pt-2 pb-2"
+          class="pl-2 pr-2 pt-2 pb-2"
         >
           <v-btn
             class="article font-Gentium h-full w-full p-0 block normal-case whitespace-normal"
