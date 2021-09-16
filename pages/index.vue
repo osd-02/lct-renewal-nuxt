@@ -9,6 +9,7 @@
               <Works id="works-location" />
             </v-col>
             <v-col cols="4">
+              <Twitter />
               <News id="news-location" />
             </v-col>
           </v-row>
@@ -16,6 +17,7 @@
         <v-sheet class="mobile-wrapper" color="secondary" v-if="this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm">
           <Carousel />
           <News id="news-location" />
+          <Twitter />
           <Works id="works-location" />
         </v-sheet>
       </v-sheet>
@@ -45,7 +47,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $header-height: 106px;
 #wrapper {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
 }
 .mobile-wrapper {

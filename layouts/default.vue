@@ -4,6 +4,7 @@
     <Header v-show="!loading" />
     <v-main v-show="!loading">
       <Nuxt />
+      <Footer />
     </v-main>
   </v-app>
 </template>

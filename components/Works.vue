@@ -76,7 +76,7 @@ import Vue from "vue";
 export default Vue.extend({
   data: () => ({
     items: [
-      { text: "Suisei HP", link: "https://suisei.herokuapp.com" },
+      { text: "Suisei HP", link: "https://suiseihp.com" },
       { text: "旧Lo-culture", link: "http://lct.starfree.jp" }
     ]
   })
