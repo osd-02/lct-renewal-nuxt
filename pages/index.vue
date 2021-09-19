@@ -9,7 +9,7 @@
               <Works id="works-location" />
             </v-col>
             <v-col cols="4">
-              <Twitter />
+              <Twitter :height="600"/>
               <News id="news-location" />
             </v-col>
           </v-row>
@@ -17,7 +17,7 @@
         <v-sheet class="mobile-wrapper" color="secondary" v-if="this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm">
           <Carousel />
           <News id="news-location" />
-          <Twitter />
+          <Twitter :height="400"/>
           <Works id="works-location" />
         </v-sheet>
       </v-sheet>

@@ -16,7 +16,7 @@
           <a
             class="twitter-timeline"
             data-lang="ja"
-            data-height="600"
+            :data-height="this.height"
             data-theme="dark"
             href="https://twitter.com/lo_culture?ref_src=twsrc%5Etfw"
             >Tweets by lo culture</a
@@ -33,3 +33,9 @@
 </template>
 
 <style lang="scss" scoped></style>
+
+<script>
+export default {
+  props: ["height"],
+};
+</script>

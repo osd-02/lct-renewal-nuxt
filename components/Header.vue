@@ -26,10 +26,9 @@
             class="tabs font-Spaciouo"
             v-for="tabItem in setTab()"
             :key="tabItem.id"
+            v-scroll-to="`#${tabItem.linkto}`"
           >
-            <NuxtLink v-scroll-to="`#${tabItem.linkto}`" to
-              >{{ tabItem.title }}
-            </NuxtLink>
+            {{ tabItem.title }}
           </v-tab>
         </v-tabs>
       </template>
